@@ -17,9 +17,16 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Gascogne-Regular.ttf</string>
+		<string>Mabry Pro Medium.ttf</string>
+		<string>mabry-regular-pro.ttf</string>
+		<string>Pherome.otf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -43,13 +50,6 @@
 	<true/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Gascogne-Regular.ttf</string>
-		<string>Mabry Pro Medium.ttf</string>
-		<string>mabry-regular-pro.ttf</string>
-		<string>pherome.ttf</string>
-	</array>
 	<key>UIMainStoryboardFile</key>
 	<string>Entry</string>
 	<key>UIRequiredDeviceCapabilities</key>

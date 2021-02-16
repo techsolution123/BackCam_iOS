@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="mabry-regular-pro.ttf">
+            <string>MabryPro-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="UserInputFiledTableCell" rowHeight="127" id="K2v-az-Nnm" customClass="UserInputFiledTableCell" customModule="BagCam" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="413" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K2v-az-Nnm" id="GZD-st-WpM">
+                <rect key="frame" x="0.0" y="0.0" width="413" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rkx-jQ-Qe3">
+                        <rect key="frame" x="15" y="0.0" width="383" height="16.5"/>
+                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="14"/>
+                        <color key="textColor" name="appPlaceholder"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="41e-8e-gcf" customClass="TintTextField" customModule="BagCam" customModuleProvider="target">
+                        <rect key="frame" x="15" y="28.5" width="386" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="34" id="Vvm-a3-Hi1"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="22"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ed-e2-CiP">
+                        <rect key="frame" x="15" y="62.5" width="398" height="1"/>
+                        <color key="backgroundColor" name="appBlack"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="MFb-r4-xCi"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CjV-Ds-m7n">
+                        <rect key="frame" x="15" y="75.5" width="398" height="16.5"/>
+                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="14"/>
+                        <color key="textColor" name="appRed"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="3Ed-e2-CiP" firstAttribute="top" secondItem="41e-8e-gcf" secondAttribute="bottom" id="D6V-lC-Ohl"/>
+                    <constraint firstItem="CjV-Ds-m7n" firstAttribute="leading" secondItem="3Ed-e2-CiP" secondAttribute="leading" id="NW4-az-2HA"/>
+                    <constraint firstItem="Rkx-jQ-Qe3" firstAttribute="leading" secondItem="GZD-st-WpM" secondAttribute="leading" constant="15" id="P8A-QC-n3F"/>
+                    <constraint firstItem="CjV-Ds-m7n" firstAttribute="top" secondItem="3Ed-e2-CiP" secondAttribute="bottom" constant="12" id="S1F-jA-DEL"/>
+                    <constraint firstAttribute="trailing" secondItem="41e-8e-gcf" secondAttribute="trailing" constant="12" id="dBA-DP-Gnm"/>
+                    <constraint firstAttribute="trailing" secondItem="Rkx-jQ-Qe3" secondAttribute="trailing" constant="15" id="e3l-7U-3IO"/>
+                    <constraint firstItem="CjV-Ds-m7n" firstAttribute="trailing" secondItem="3Ed-e2-CiP" secondAttribute="trailing" id="kZm-yI-hr2"/>
+                    <constraint firstItem="Rkx-jQ-Qe3" firstAttribute="top" secondItem="GZD-st-WpM" secondAttribute="top" id="lXz-mH-tsm"/>
+                    <constraint firstItem="3Ed-e2-CiP" firstAttribute="leading" secondItem="41e-8e-gcf" secondAttribute="leading" id="oTs-X7-ULh"/>
+                    <constraint firstItem="41e-8e-gcf" firstAttribute="leading" secondItem="Rkx-jQ-Qe3" secondAttribute="leading" id="sag-5I-Vzd"/>
+                    <constraint firstAttribute="trailing" secondItem="3Ed-e2-CiP" secondAttribute="trailing" id="sfp-06-0gr"/>
+                    <constraint firstItem="41e-8e-gcf" firstAttribute="top" secondItem="Rkx-jQ-Qe3" secondAttribute="bottom" constant="12" id="z9x-RQ-1zH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="lblErrorMessage" destination="CjV-Ds-m7n" id="qy9-Xv-Oxy"/>
+                <outlet property="lblLine" destination="3Ed-e2-CiP" id="zlo-cK-ZHn"/>
+                <outlet property="lblTitle" destination="Rkx-jQ-Qe3" id="5xi-r5-33K"/>
+                <outlet property="tfInput" destination="41e-8e-gcf" id="IiI-i8-qD8"/>
+            </connections>
+            <point key="canvasLocation" x="-55.797101449275367" y="73.660714285714278"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="appBlack">
+            <color red="0.13725490196078433" green="0.12156862745098039" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="appPlaceholder">
+            <color red="0.63921568627450975" green="0.63921568627450975" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="appRed">
+            <color red="0.88627450980392153" green="0.30980392156862746" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
