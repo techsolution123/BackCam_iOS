@@ -31,11 +31,11 @@ class NavigationVC: UINavigationController, UIGestureRecognizerDelegate, UINavig
     // MARK: - UINavigationControllerDelegate
     func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
         /// Add every non interactive view controller so controller dont go back automatically.
-        interactivePopGestureRecognizer!.isEnabled = true
-//        if viewController is LoginTypeVC || viewController is LGSideMenuController {
-//            interactivePopGestureRecognizer!.isEnabled = false
-//        } else {
-//            interactivePopGestureRecognizer!.isEnabled = true
-//        }
+        if viewController is FullDevicePairingVC ||
+            viewController is FullDevicePairedSuccessfullyVC {
+            interactivePopGestureRecognizer!.isEnabled = false
+        } else {
+            interactivePopGestureRecognizer!.isEnabled = true
+        }
     }
 }

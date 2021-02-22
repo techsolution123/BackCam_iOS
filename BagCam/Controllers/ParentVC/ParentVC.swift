@@ -35,13 +35,6 @@ extension ParentVC {
     func prepareParentUI() {
         print("Allocated: \(self.classForCoder)")
     }
-    
-    func presentDummyController() {
-        let story: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
-        let destVC = story.instantiateViewController(identifier: "ViewController")
-        destVC.modalPresentationStyle = .fullScreen
-        self.present(destVC, animated: true, completion: nil)
-    }
 }
 
 // MARK: - UIButton Action(s)

@@ -100,9 +100,11 @@ extension SignupVC {
             }
             self.hideCentralSpinner()
             if status == .success, let jsonDict = json as? [String: Any] {
-                if let _ = jsonDict["data"] as? [String: Any] {
+                if let dataDict = jsonDict["data"] as? [String: Any] {
+                    /// Storing user data into core data
+                    User.createOrUpdateUser(dataDict)
                     DispatchQueue.main.async {
-                        self.presentDummyController()
+                        self.performSegue(withIdentifier: "segueFullDevicePairingVC", sender: nil)
                     }
                 } else {
                     self.showError(data: json)

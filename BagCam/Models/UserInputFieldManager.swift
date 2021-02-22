@@ -14,6 +14,7 @@ enum UserInputFieldType {
     case forgotPassword
     case verifyCode
     case resetPassword
+    case deviceName
     
     var titleAttr: NSAttributedString? {
         switch self {
@@ -35,6 +36,8 @@ enum UserInputFieldType {
         case .resetPassword:
             let attStr: NSAttributedString = NSAttributedString(string: "Reset\nPassword.", attributes: [.font: AppFont.pheromeRegular.of(45)])
             return attStr
+        default:
+            return nil
         }
     }
 }
@@ -48,6 +51,7 @@ class UserInputFieldModel: NSObject {
     var webKey: String = ""
     var isValid: Bool = true
     var errorMessage: String = ""
+    var textAlignment: NSTextAlignment = .left
     
     var lineColor: UIColor {
         return isValid ? AppColorManager.shared.appBlack : AppColorManager.shared.appRed
@@ -79,6 +83,8 @@ class UserInputFieldManager: NSObject {
             self.verifyCodeField()
         case .resetPassword:
             self.resetPasswordField()
+        case .deviceName:
+            self.deviceNameField()
         }
     }
     
@@ -145,6 +151,16 @@ class UserInputFieldManager: NSObject {
         inputField2.webKey = ""
         
         self.arrUserInputFieldModel = [inputField1, inputField2]
+    }
+    
+    fileprivate func deviceNameField() {
+        let inputField1 = UserInputFieldModel()
+        inputField1.title = "Please name this device"
+        inputField1.placeholder = "Kevin's Bag"
+        inputField1.webKey = "device_name"
+        inputField1.textAlignment = .center
+        
+        self.arrUserInputFieldModel = [inputField1]
     }
 }
 
@@ -267,6 +283,13 @@ extension UserInputFieldManager {
                 result.index = 1
                 result.valid = false
                 result.error = kEnterPasswordNotMatched
+                return result
+            }
+        case .deviceName:
+            if String.validate(value: arrUserInputFieldModel[0].text) {
+                result.index = 0
+                result.valid = false
+                result.error = kEnterDeviceName
                 return result
             }
         }

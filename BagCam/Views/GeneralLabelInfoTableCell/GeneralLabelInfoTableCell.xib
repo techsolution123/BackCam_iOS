@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="mabry-regular-pro.ttf">
+            <string>MabryPro-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="GeneralLabelInfoTableCell" rowHeight="83" id="Att-a0-K3O" customClass="GeneralLabelInfoTableCell" customModule="BagCam" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="431" height="83"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Att-a0-K3O" id="dhc-g7-F72">
+                <rect key="frame" x="0.0" y="0.0" width="431" height="83"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="􀁣 Account  Successfully Created" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YuB-V0-9j7">
+                        <rect key="frame" x="8" y="8" width="415" height="67"/>
+                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="17"/>
+                        <color key="textColor" name="appBlue"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="YuB-V0-9j7" firstAttribute="top" secondItem="dhc-g7-F72" secondAttribute="top" constant="8" id="9ra-6I-5bT"/>
+                    <constraint firstItem="YuB-V0-9j7" firstAttribute="leading" secondItem="dhc-g7-F72" secondAttribute="leading" constant="8" id="TNG-Vy-sas"/>
+                    <constraint firstAttribute="trailing" secondItem="YuB-V0-9j7" secondAttribute="trailing" constant="8" id="U52-oC-MMY"/>
+                    <constraint firstAttribute="bottom" secondItem="YuB-V0-9j7" secondAttribute="bottom" constant="8" id="blS-gE-Hzd"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="lblTitle" destination="YuB-V0-9j7" id="3Ng-hj-nGf"/>
+            </connections>
+            <point key="canvasLocation" x="236.95652173913047" y="17.745535714285712"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="appBlue">
+            <color red="0.10588235294117647" green="0.47843137254901963" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

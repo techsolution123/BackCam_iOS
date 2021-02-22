@@ -60,10 +60,13 @@ class UserInputFiledTableCell: UITableViewCell {
     fileprivate func prepareDefaultFields() {
         let userInputField = userInputFieldManager.arrUserInputFieldModel[tag]
         lblTitle.text = userInputField.title
+        lblTitle.textAlignment = userInputField.textAlignment
         lblLine.backgroundColor = userInputField.lineColor
         lblErrorMessage.isHidden = userInputField.isValid
         lblErrorMessage.text = userInputField.errorMessage
+        lblErrorMessage.textAlignment = userInputField.textAlignment
         tfInput.text = userInputField.text
+        tfInput.textAlignment = userInputField.textAlignment
         tfInput.placeholder = userInputField.placeholder
         tfInput.isSecureTextEntry = false
         tfInput.autocapitalizationType = .none
@@ -132,6 +135,8 @@ class UserInputFiledTableCell: UITableViewCell {
             self.verifyCodeField()
         case .resetPassword:
             self.resetPasswordField()
+        case .deviceName:
+            self.deviceNameField()
         }
     }
     
@@ -183,6 +188,12 @@ class UserInputFiledTableCell: UITableViewCell {
             tfInput.isSecureTextEntry = true
             tfInput.textContentType = .password
 //            textFieldRightView("ic_faceId")
+        }
+    }
+    
+    fileprivate func deviceNameField() {
+        if tag == 0 {
+            tfInput.textContentType = .username
         }
     }
 }

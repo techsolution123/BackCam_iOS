@@ -121,8 +121,10 @@ extension LoginVC {
             self.hideCentralSpinner()
             if statusCode == .success, let jsonDict = json as? [String: Any] {
                 if let dataDict = jsonDict["data"] as? [String: Any] {
+                    /// Storing user data into core data
+                    User.createOrUpdateUser(dataDict)
                     DispatchQueue.main.async {
-                        self.presentDummyController()
+                        SceneDelegate.shared.redirectUserToHomeScreenIfNeeded()
                     }
                 } else {
                     self.showError(data: json)
