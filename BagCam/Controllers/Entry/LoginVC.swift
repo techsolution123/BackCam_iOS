@@ -33,6 +33,10 @@ class LoginVC: ParentVC {
             
         }
     }
+    
+    @IBAction func unwindLogin(_ segue: UIStoryboardSegue) {
+        
+    }
 }
 
 // MARK: - UI Related Method(s)
@@ -52,11 +56,17 @@ extension LoginVC {
 extension LoginVC {
     
     @IBAction func tapBtnLogin(_ sender: UIButton) {
-        let isValid = self.userInputFieldManager.arrUserInputFieldModel.allSatisfy { (model) -> Bool in
-            return model.isValid
-        }
-        if isValid {
+        let value = self.userInputFieldManager.isValidData()
+        if value.valid {
+            /// WebCall(s)
             self.webLogin()
+        } else {
+            userInputFieldManager.arrUserInputFieldModel[value.index].isValid = false
+            userInputFieldManager.arrUserInputFieldModel[value.index].errorMessage = value.error
+            /// Reloading tableView in main thread
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
     }
     
@@ -103,14 +113,18 @@ extension LoginVC: UITableViewDelegate, UITableViewDataSource {
 extension LoginVC {
     
     func webLogin() {
+        showCentralSpinner()
         Webservice.shared.request(for: .login, param: self.userInputFieldManager.paramDict()) { [weak self] (statusCode, json, error) in
             guard let self = self else {
                 return
             }
+            self.hideCentralSpinner()
             if statusCode == .success, let jsonDict = json as? [String: Any] {
                 if let dataDict = jsonDict["data"] as? [String: Any] {
+                    /// Storing user data into core data
+                    User.createOrUpdateUser(dataDict)
                     DispatchQueue.main.async {
-                        self.presentDummyController()
+                        SceneDelegate.shared.redirectUserToHomeScreenIfNeeded()
                     }
                 } else {
                     self.showError(data: json)

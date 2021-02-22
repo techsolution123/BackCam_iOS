@@ -10,13 +10,18 @@
 		261842A425D7CBF8006F5EBD /* Mabry Pro Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 261842A225D7CBF8006F5EBD /* Mabry Pro Medium.ttf */; };
 		261842A525D7CBF8006F5EBD /* mabry-regular-pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 261842A325D7CBF8006F5EBD /* mabry-regular-pro.ttf */; };
 		261842A925D7CC14006F5EBD /* Gascogne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 261842A825D7CC14006F5EBD /* Gascogne-Regular.ttf */; };
-		261842AC25D7CC21006F5EBD /* pherome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 261842AB25D7CC21006F5EBD /* pherome.ttf */; };
 		261842B425D7D91A006F5EBD /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261842B325D7D91A006F5EBD /* SignupVC.swift */; };
 		261842C225D7E058006F5EBD /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261842C125D7E058006F5EBD /* ForgotPasswordVC.swift */; };
 		261842C525D7E822006F5EBD /* VerificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261842C425D7E822006F5EBD /* VerificationVC.swift */; };
 		261842C925D7EB9D006F5EBD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 261842C825D7EB9D006F5EBD /* Alamofire */; };
 		262B59E625DACAD200C4C502 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 262B59E425DACAD200C4C502 /* Home.storyboard */; };
 		262B59E925DACDA300C4C502 /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262B59E825DACDA300C4C502 /* ResetPasswordVC.swift */; };
+		262DBA7D25DBDB1B004A6499 /* Pherome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 262DBA7C25DBDB1B004A6499 /* Pherome.otf */; };
+		262DBA8025DBDB30004A6499 /* mabry-light-pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 262DBA7F25DBDB30004A6499 /* mabry-light-pro.ttf */; };
+		262DBA8625DBDCC9004A6499 /* ActivityIndicator.xib in Resources */ = {isa = PBXBuildFile; fileRef = 262DBA8425DBDCC9004A6499 /* ActivityIndicator.xib */; };
+		262DBA8725DBDCC9004A6499 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262DBA8525DBDCC9004A6499 /* ActivityIndicator.swift */; };
+		262DBA8A25DBDCF3004A6499 /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262DBA8925DBDCF3004A6499 /* UIDeviceExtension.swift */; };
+		262DBA9025DBEAA6004A6499 /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262DBA8F25DBEAA6004A6499 /* DictionaryExtension.swift */; };
 		266F36C125D6778300EDAD38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266F36C025D6778300EDAD38 /* AppDelegate.swift */; };
 		266F36C325D6778300EDAD38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266F36C225D6778300EDAD38 /* SceneDelegate.swift */; };
 		266F36C525D6778300EDAD38 /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266F36C425D6778300EDAD38 /* LoadingVC.swift */; };
@@ -24,6 +29,33 @@
 		266F36CB25D6778300EDAD38 /* BagCam.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 266F36C925D6778300EDAD38 /* BagCam.xcdatamodeld */; };
 		266F36CD25D6778900EDAD38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 266F36CC25D6778900EDAD38 /* Assets.xcassets */; };
 		266F36D025D6778900EDAD38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 266F36CE25D6778900EDAD38 /* LaunchScreen.storyboard */; };
+		267B252225DE31B600DF4BC4 /* TabbarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 267B252125DE31B600DF4BC4 /* TabbarView.xib */; };
+		267B252825DE368F00DF4BC4 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 267B252625DE368F00DF4BC4 /* Tabbar.storyboard */; };
+		267B252D25DE36F800DF4BC4 /* TabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267B252C25DE36F800DF4BC4 /* TabbarVC.swift */; };
+		267B253125DE374400DF4BC4 /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267B253025DE374400DF4BC4 /* TabbarView.swift */; };
+		267B253825DF93BF00DF4BC4 /* DeviceNameTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 267B253725DF93BF00DF4BC4 /* DeviceNameTableCell.xib */; };
+		267B253B25DF952F00DF4BC4 /* DeviceNameTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267B253A25DF952F00DF4BC4 /* DeviceNameTableCell.swift */; };
+		267B253F25DFB41000DF4BC4 /* AddDeviceTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 267B253E25DFB41000DF4BC4 /* AddDeviceTableCell.xib */; };
+		2692C4A625DFB532009919D1 /* AddDeviceTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2692C4A525DFB532009919D1 /* AddDeviceTableCell.swift */; };
+		2692C4AA25DFB5C0009919D1 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2692C4A925DFB5C0009919D1 /* HomeVC.swift */; };
+		2692C4B125DFBA67009919D1 /* DeviceListTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2692C4B025DFBA67009919D1 /* DeviceListTableCell.xib */; };
+		2692C4B425DFBF97009919D1 /* DeviceListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2692C4B325DFBF97009919D1 /* DeviceListTableCell.swift */; };
+		2692C4BE25DFD7C6009919D1 /* EditDeviceNameTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2692C4BD25DFD7C6009919D1 /* EditDeviceNameTableCell.xib */; };
+		2695BDF425DFDE1B00404815 /* EditDeviceNameTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2695BDF325DFDE1B00404815 /* EditDeviceNameTableCell.swift */; };
+		2695BDF825DFE02100404815 /* DeviceInfoTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2695BDF725DFE02100404815 /* DeviceInfoTableCell.xib */; };
+		2695BDFB25DFE26B00404815 /* DeviceInfoTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2695BDFA25DFE26B00404815 /* DeviceInfoTableCell.swift */; };
+		2695BE0025DFE43C00404815 /* DeviceInfoType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2695BDFF25DFE43C00404815 /* DeviceInfoType.swift */; };
+		2695BE0325DFE9AB00404815 /* DeviceSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2695BE0225DFE9AB00404815 /* DeviceSettingVC.swift */; };
+		26A015F025DD1F7A003387CE /* CoreDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A015EF25DD1F7A003387CE /* CoreDatabaseManager.swift */; };
+		26A015F325DD205D003387CE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A015F225DD205D003387CE /* User.swift */; };
+		26A015F925DD2F41003387CE /* BagTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26A015F825DD2F41003387CE /* BagTableCell.xib */; };
+		26A015FC25DD2FBB003387CE /* BagTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A015FB25DD2FBB003387CE /* BagTableCell.swift */; };
+		26A0160025DD3054003387CE /* GeneralLabelInfoTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26A015FF25DD3054003387CE /* GeneralLabelInfoTableCell.xib */; };
+		26A0160325DD310E003387CE /* GeneralLabelInfoTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A0160225DD310E003387CE /* GeneralLabelInfoTableCell.swift */; };
+		26A0160625DD3156003387CE /* GeneralLabelInfoType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A0160525DD3156003387CE /* GeneralLabelInfoType.swift */; };
+		26A0160A25DD33BB003387CE /* BagImageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A0160925DD33BB003387CE /* BagImageType.swift */; };
+		26A0160E25DD392F003387CE /* FullDevicePairingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A0160D25DD392F003387CE /* FullDevicePairingVC.swift */; };
+		26A0161225DD46AD003387CE /* FullDevicePairedSuccessfullyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A0161125DD46AD003387CE /* FullDevicePairedSuccessfullyVC.swift */; };
 		26D5F10E25D6A62500065FC0 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D5F10D25D6A62500065FC0 /* LoginVC.swift */; };
 		26D5F11225D6AD6000065FC0 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 26D5F11125D6AD6000065FC0 /* IQKeyboardManagerSwift */; };
 		26E3555D25D6827C007B7EF1 /* ParentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E3555C25D6827C007B7EF1 /* ParentVC.swift */; };
@@ -46,12 +78,17 @@
 		261842A225D7CBF8006F5EBD /* Mabry Pro Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mabry Pro Medium.ttf"; sourceTree = "<group>"; };
 		261842A325D7CBF8006F5EBD /* mabry-regular-pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "mabry-regular-pro.ttf"; sourceTree = "<group>"; };
 		261842A825D7CC14006F5EBD /* Gascogne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gascogne-Regular.ttf"; sourceTree = "<group>"; };
-		261842AB25D7CC21006F5EBD /* pherome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pherome.ttf; sourceTree = "<group>"; };
 		261842B325D7D91A006F5EBD /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		261842C125D7E058006F5EBD /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		261842C425D7E822006F5EBD /* VerificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationVC.swift; sourceTree = "<group>"; };
 		262B59E525DACAD200C4C502 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		262B59E825DACDA300C4C502 /* ResetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordVC.swift; sourceTree = "<group>"; };
+		262DBA7C25DBDB1B004A6499 /* Pherome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pherome.otf; sourceTree = "<group>"; };
+		262DBA7F25DBDB30004A6499 /* mabry-light-pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "mabry-light-pro.ttf"; sourceTree = "<group>"; };
+		262DBA8425DBDCC9004A6499 /* ActivityIndicator.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityIndicator.xib; sourceTree = "<group>"; };
+		262DBA8525DBDCC9004A6499 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		262DBA8925DBDCF3004A6499 /* UIDeviceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
+		262DBA8F25DBEAA6004A6499 /* DictionaryExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
 		266F36BD25D6778300EDAD38 /* BagCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BagCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		266F36C025D6778300EDAD38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		266F36C225D6778300EDAD38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +98,33 @@
 		266F36CC25D6778900EDAD38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		266F36CF25D6778900EDAD38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		266F36D125D6778900EDAD38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		267B252125DE31B600DF4BC4 /* TabbarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabbarView.xib; sourceTree = "<group>"; };
+		267B252725DE368F00DF4BC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Tabbar.storyboard; sourceTree = "<group>"; };
+		267B252C25DE36F800DF4BC4 /* TabbarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarVC.swift; sourceTree = "<group>"; };
+		267B253025DE374400DF4BC4 /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
+		267B253725DF93BF00DF4BC4 /* DeviceNameTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceNameTableCell.xib; sourceTree = "<group>"; };
+		267B253A25DF952F00DF4BC4 /* DeviceNameTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceNameTableCell.swift; sourceTree = "<group>"; };
+		267B253E25DFB41000DF4BC4 /* AddDeviceTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddDeviceTableCell.xib; sourceTree = "<group>"; };
+		2692C4A525DFB532009919D1 /* AddDeviceTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceTableCell.swift; sourceTree = "<group>"; };
+		2692C4A925DFB5C0009919D1 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		2692C4B025DFBA67009919D1 /* DeviceListTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceListTableCell.xib; sourceTree = "<group>"; };
+		2692C4B325DFBF97009919D1 /* DeviceListTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListTableCell.swift; sourceTree = "<group>"; };
+		2692C4BD25DFD7C6009919D1 /* EditDeviceNameTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditDeviceNameTableCell.xib; sourceTree = "<group>"; };
+		2695BDF325DFDE1B00404815 /* EditDeviceNameTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDeviceNameTableCell.swift; sourceTree = "<group>"; };
+		2695BDF725DFE02100404815 /* DeviceInfoTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceInfoTableCell.xib; sourceTree = "<group>"; };
+		2695BDFA25DFE26B00404815 /* DeviceInfoTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfoTableCell.swift; sourceTree = "<group>"; };
+		2695BDFF25DFE43C00404815 /* DeviceInfoType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfoType.swift; sourceTree = "<group>"; };
+		2695BE0225DFE9AB00404815 /* DeviceSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSettingVC.swift; sourceTree = "<group>"; };
+		26A015EF25DD1F7A003387CE /* CoreDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDatabaseManager.swift; sourceTree = "<group>"; };
+		26A015F225DD205D003387CE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		26A015F825DD2F41003387CE /* BagTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BagTableCell.xib; sourceTree = "<group>"; };
+		26A015FB25DD2FBB003387CE /* BagTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagTableCell.swift; sourceTree = "<group>"; };
+		26A015FF25DD3054003387CE /* GeneralLabelInfoTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralLabelInfoTableCell.xib; sourceTree = "<group>"; };
+		26A0160225DD310E003387CE /* GeneralLabelInfoTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralLabelInfoTableCell.swift; sourceTree = "<group>"; };
+		26A0160525DD3156003387CE /* GeneralLabelInfoType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralLabelInfoType.swift; sourceTree = "<group>"; };
+		26A0160925DD33BB003387CE /* BagImageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagImageType.swift; sourceTree = "<group>"; };
+		26A0160D25DD392F003387CE /* FullDevicePairingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullDevicePairingVC.swift; sourceTree = "<group>"; };
+		26A0161125DD46AD003387CE /* FullDevicePairedSuccessfullyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullDevicePairedSuccessfullyVC.swift; sourceTree = "<group>"; };
 		26D5F10D25D6A62500065FC0 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		26E3555C25D6827C007B7EF1 /* ParentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentVC.swift; sourceTree = "<group>"; };
 		26E3556325D68339007B7EF1 /* NavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationVC.swift; sourceTree = "<group>"; };
@@ -105,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				261842A225D7CBF8006F5EBD /* Mabry Pro Medium.ttf */,
+				262DBA7F25DBDB30004A6499 /* mabry-light-pro.ttf */,
 				261842A325D7CBF8006F5EBD /* mabry-regular-pro.ttf */,
 			);
 			path = MabryPro;
@@ -121,9 +186,18 @@
 		261842AE25D7CC31006F5EBD /* Pherome */ = {
 			isa = PBXGroup;
 			children = (
-				261842AB25D7CC21006F5EBD /* pherome.ttf */,
+				262DBA7C25DBDB1B004A6499 /* Pherome.otf */,
 			);
 			path = Pherome;
+			sourceTree = "<group>";
+		};
+		262DBA8325DBDCC9004A6499 /* ActivityIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				262DBA8425DBDCC9004A6499 /* ActivityIndicator.xib */,
+				262DBA8525DBDCC9004A6499 /* ActivityIndicator.swift */,
+			);
+			path = ActivityIndicator;
 			sourceTree = "<group>";
 		};
 		266F36B425D6778300EDAD38 = {
@@ -156,11 +230,101 @@
 			path = BagCam;
 			sourceTree = "<group>";
 		};
+		267B252025DE318E00DF4BC4 /* TabbarView */ = {
+			isa = PBXGroup;
+			children = (
+				267B252125DE31B600DF4BC4 /* TabbarView.xib */,
+				267B253025DE374400DF4BC4 /* TabbarView.swift */,
+			);
+			path = TabbarView;
+			sourceTree = "<group>";
+		};
+		267B252B25DE36E700DF4BC4 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				267B252C25DE36F800DF4BC4 /* TabbarVC.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		267B253625DF93A100DF4BC4 /* DeviceNameTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				267B253725DF93BF00DF4BC4 /* DeviceNameTableCell.xib */,
+				267B253A25DF952F00DF4BC4 /* DeviceNameTableCell.swift */,
+			);
+			path = DeviceNameTableCell;
+			sourceTree = "<group>";
+		};
+		267B253D25DFB3F100DF4BC4 /* AddDeviceTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				267B253E25DFB41000DF4BC4 /* AddDeviceTableCell.xib */,
+				2692C4A525DFB532009919D1 /* AddDeviceTableCell.swift */,
+			);
+			path = AddDeviceTableCell;
+			sourceTree = "<group>";
+		};
+		2692C4A825DFB5AE009919D1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2692C4A925DFB5C0009919D1 /* HomeVC.swift */,
+				2695BE0225DFE9AB00404815 /* DeviceSettingVC.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2692C4AF25DFBA4D009919D1 /* DeviceListTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				2692C4B025DFBA67009919D1 /* DeviceListTableCell.xib */,
+				2692C4B325DFBF97009919D1 /* DeviceListTableCell.swift */,
+			);
+			path = DeviceListTableCell;
+			sourceTree = "<group>";
+		};
+		2692C4BC25DFD7B0009919D1 /* EditDeviceNameTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				2692C4BD25DFD7C6009919D1 /* EditDeviceNameTableCell.xib */,
+				2695BDF325DFDE1B00404815 /* EditDeviceNameTableCell.swift */,
+			);
+			path = EditDeviceNameTableCell;
+			sourceTree = "<group>";
+		};
+		2695BDF625DFDFFA00404815 /* DeviceInfoTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				2695BDF725DFE02100404815 /* DeviceInfoTableCell.xib */,
+				2695BDFA25DFE26B00404815 /* DeviceInfoTableCell.swift */,
+			);
+			path = DeviceInfoTableCell;
+			sourceTree = "<group>";
+		};
+		26A015F725DD2EF8003387CE /* BagTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				26A015F825DD2F41003387CE /* BagTableCell.xib */,
+				26A015FB25DD2FBB003387CE /* BagTableCell.swift */,
+			);
+			path = BagTableCell;
+			sourceTree = "<group>";
+		};
+		26A015FE25DD3033003387CE /* GeneralLabelInfoTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				26A015FF25DD3054003387CE /* GeneralLabelInfoTableCell.xib */,
+				26A0160225DD310E003387CE /* GeneralLabelInfoTableCell.swift */,
+			);
+			path = GeneralLabelInfoTableCell;
+			sourceTree = "<group>";
+		};
 		26E3555625D68218007B7EF1 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				266F36CE25D6778900EDAD38 /* LaunchScreen.storyboard */,
 				266F36C625D6778300EDAD38 /* Entry.storyboard */,
+				267B252625DE368F00DF4BC4 /* Tabbar.storyboard */,
 				262B59E425DACAD200C4C502 /* Home.storyboard */,
 			);
 			path = Storyboards;
@@ -181,6 +345,9 @@
 			children = (
 				26E3555925D68233007B7EF1 /* CoreData */,
 				26E3558125D69BC1007B7EF1 /* UserInputFieldManager.swift */,
+				26A0160925DD33BB003387CE /* BagImageType.swift */,
+				26A0160525DD3156003387CE /* GeneralLabelInfoType.swift */,
+				2695BDFF25DFE43C00404815 /* DeviceInfoType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -189,6 +356,8 @@
 			isa = PBXGroup;
 			children = (
 				266F36C925D6778300EDAD38 /* BagCam.xcdatamodeld */,
+				26A015EF25DD1F7A003387CE /* CoreDatabaseManager.swift */,
+				26A015F225DD205D003387CE /* User.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -203,6 +372,8 @@
 				261842C125D7E058006F5EBD /* ForgotPasswordVC.swift */,
 				261842C425D7E822006F5EBD /* VerificationVC.swift */,
 				262B59E825DACDA300C4C502 /* ResetPasswordVC.swift */,
+				26A0160D25DD392F003387CE /* FullDevicePairingVC.swift */,
+				26A0161125DD46AD003387CE /* FullDevicePairedSuccessfullyVC.swift */,
 			);
 			path = Entry;
 			sourceTree = "<group>";
@@ -237,6 +408,8 @@
 			children = (
 				26E3555B25D68266007B7EF1 /* ParentVC */,
 				26E3555A25D6825E007B7EF1 /* Entry */,
+				267B252B25DE36E700DF4BC4 /* Tabbar */,
+				2692C4A825DFB5AE009919D1 /* Home */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -245,8 +418,17 @@
 			isa = PBXGroup;
 			children = (
 				26E3555625D68218007B7EF1 /* Storyboards */,
+				267B252025DE318E00DF4BC4 /* TabbarView */,
+				262DBA8325DBDCC9004A6499 /* ActivityIndicator */,
 				7468662125DA4C29009918D4 /* TitleTableCell */,
 				7468662425DA4C29009918D4 /* UserInputFiledTableCell */,
+				26A015F725DD2EF8003387CE /* BagTableCell */,
+				26A015FE25DD3033003387CE /* GeneralLabelInfoTableCell */,
+				267B253625DF93A100DF4BC4 /* DeviceNameTableCell */,
+				267B253D25DFB3F100DF4BC4 /* AddDeviceTableCell */,
+				2692C4AF25DFBA4D009919D1 /* DeviceListTableCell */,
+				2692C4BC25DFD7B0009919D1 /* EditDeviceNameTableCell */,
+				2695BDF625DFDFFA00404815 /* DeviceInfoTableCell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -301,7 +483,9 @@
 			isa = PBXGroup;
 			children = (
 				7468663725DA4F72009918D4 /* UIKitExtension.swift */,
+				262DBA8925DBDCF3004A6499 /* UIDeviceExtension.swift */,
 				7468663825DA4F72009918D4 /* StringExtension.swift */,
+				262DBA8F25DBEAA6004A6499 /* DictionaryExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -371,15 +555,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				262DBA7D25DBDB1B004A6499 /* Pherome.otf in Resources */,
 				266F36D025D6778900EDAD38 /* LaunchScreen.storyboard in Resources */,
 				262B59E625DACAD200C4C502 /* Home.storyboard in Resources */,
 				7468662825DA4C29009918D4 /* TitleTableCell.xib in Resources */,
+				267B252825DE368F00DF4BC4 /* Tabbar.storyboard in Resources */,
+				2692C4B125DFBA67009919D1 /* DeviceListTableCell.xib in Resources */,
+				267B253825DF93BF00DF4BC4 /* DeviceNameTableCell.xib in Resources */,
+				267B252225DE31B600DF4BC4 /* TabbarView.xib in Resources */,
+				262DBA8625DBDCC9004A6499 /* ActivityIndicator.xib in Resources */,
+				262DBA8025DBDB30004A6499 /* mabry-light-pro.ttf in Resources */,
+				2695BDF825DFE02100404815 /* DeviceInfoTableCell.xib in Resources */,
 				261842A525D7CBF8006F5EBD /* mabry-regular-pro.ttf in Resources */,
 				261842A425D7CBF8006F5EBD /* Mabry Pro Medium.ttf in Resources */,
-				261842AC25D7CC21006F5EBD /* pherome.ttf in Resources */,
+				26A015F925DD2F41003387CE /* BagTableCell.xib in Resources */,
 				266F36CD25D6778900EDAD38 /* Assets.xcassets in Resources */,
 				261842A925D7CC14006F5EBD /* Gascogne-Regular.ttf in Resources */,
+				2692C4BE25DFD7C6009919D1 /* EditDeviceNameTableCell.xib in Resources */,
 				266F36C825D6778300EDAD38 /* Entry.storyboard in Resources */,
+				26A0160025DD3054003387CE /* GeneralLabelInfoTableCell.xib in Resources */,
+				267B253F25DFB41000DF4BC4 /* AddDeviceTableCell.xib in Resources */,
 				7468662925DA4C29009918D4 /* UserInputFiledTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,27 +586,48 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26A015F325DD205D003387CE /* User.swift in Sources */,
 				26E3556425D68339007B7EF1 /* NavigationVC.swift in Sources */,
+				267B252D25DE36F800DF4BC4 /* TabbarVC.swift in Sources */,
 				266F36C525D6778300EDAD38 /* LoadingVC.swift in Sources */,
 				7468663D25DA4F72009918D4 /* UIKitExtension.swift in Sources */,
 				26E3558225D69BC1007B7EF1 /* UserInputFieldManager.swift in Sources */,
+				2695BDF425DFDE1B00404815 /* EditDeviceNameTableCell.swift in Sources */,
+				2695BDFB25DFE26B00404815 /* DeviceInfoTableCell.swift in Sources */,
+				267B253B25DF952F00DF4BC4 /* DeviceNameTableCell.swift in Sources */,
+				26A0161225DD46AD003387CE /* FullDevicePairedSuccessfullyVC.swift in Sources */,
 				266F36C125D6778300EDAD38 /* AppDelegate.swift in Sources */,
+				26A0160A25DD33BB003387CE /* BagImageType.swift in Sources */,
 				26E3555D25D6827C007B7EF1 /* ParentVC.swift in Sources */,
 				261842B425D7D91A006F5EBD /* SignupVC.swift in Sources */,
 				7468663C25DA4F72009918D4 /* AppFont.swift in Sources */,
+				267B253125DE374400DF4BC4 /* TabbarView.swift in Sources */,
+				26A015FC25DD2FBB003387CE /* BagTableCell.swift in Sources */,
 				7468663B25DA4F72009918D4 /* WebService.swift in Sources */,
+				2692C4A625DFB532009919D1 /* AddDeviceTableCell.swift in Sources */,
+				2692C4AA25DFB5C0009919D1 /* HomeVC.swift in Sources */,
 				7468662725DA4C29009918D4 /* TitleTableCell.swift in Sources */,
 				266F36CB25D6778300EDAD38 /* BagCam.xcdatamodeld in Sources */,
+				262DBA8A25DBDCF3004A6499 /* UIDeviceExtension.swift in Sources */,
+				2695BE0325DFE9AB00404815 /* DeviceSettingVC.swift in Sources */,
+				26A015F025DD1F7A003387CE /* CoreDatabaseManager.swift in Sources */,
 				262B59E925DACDA300C4C502 /* ResetPasswordVC.swift in Sources */,
 				26D5F10E25D6A62500065FC0 /* LoginVC.swift in Sources */,
+				2692C4B425DFBF97009919D1 /* DeviceListTableCell.swift in Sources */,
 				7468663925DA4F72009918D4 /* AppColorManager.swift in Sources */,
+				262DBA9025DBEAA6004A6499 /* DictionaryExtension.swift in Sources */,
 				266F36C325D6778300EDAD38 /* SceneDelegate.swift in Sources */,
 				7468663A25DA4F72009918D4 /* AppMessages.swift in Sources */,
+				2695BE0025DFE43C00404815 /* DeviceInfoType.swift in Sources */,
+				262DBA8725DBDCC9004A6499 /* ActivityIndicator.swift in Sources */,
 				26E3557125D68F10007B7EF1 /* WelcomeVC.swift in Sources */,
 				7468662A25DA4C29009918D4 /* UserInputFiledTableCell.swift in Sources */,
 				261842C525D7E822006F5EBD /* VerificationVC.swift in Sources */,
 				261842C225D7E058006F5EBD /* ForgotPasswordVC.swift in Sources */,
+				26A0160625DD3156003387CE /* GeneralLabelInfoType.swift in Sources */,
+				26A0160325DD310E003387CE /* GeneralLabelInfoTableCell.swift in Sources */,
 				7468663E25DA4F72009918D4 /* StringExtension.swift in Sources */,
+				26A0160E25DD392F003387CE /* FullDevicePairingVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +656,14 @@
 				266F36CF25D6778900EDAD38 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		267B252625DE368F00DF4BC4 /* Tabbar.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				267B252725DE368F00DF4BC4 /* Base */,
+			);
+			name = Tabbar.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -566,17 +790,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development: Sam Ristich (9VCN5A5P33)";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 96HXJ6UKC8;
 				INFOPLIST_FILE = BagCam/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kevin.BagCam;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ristichus.bagcam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = Dev_BagCam;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -587,17 +813,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Distribution: Sam Ristich (96HXJ6UKC8)";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 96HXJ6UKC8;
 				INFOPLIST_FILE = BagCam/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kevin.BagCam;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ristichus.bagcam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = Dist_BagCam;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

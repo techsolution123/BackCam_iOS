@@ -40,12 +40,17 @@ extension SignupVC {
 extension SignupVC {
     
     @IBAction func tapBtnSignup(_ sender: UIButton) {
-        let isValid = self.userInputFieldManager.arrUserInputFieldModel.allSatisfy { (model) -> Bool in
-            return model.isValid
-        }
-        if isValid {
+        let value = self.userInputFieldManager.isValidData()
+        if value.valid {
             /// WebCall(s)
             self.webSignup()
+        } else {
+            userInputFieldManager.arrUserInputFieldModel[value.index].isValid = false
+            userInputFieldManager.arrUserInputFieldModel[value.index].errorMessage = value.error
+            /// Reloading tableView in main thread
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
     }
 }
@@ -88,14 +93,18 @@ extension SignupVC: UITableViewDelegate, UITableViewDataSource {
 extension SignupVC {
     
     func webSignup() {
+        showCentralSpinner()
         Webservice.shared.request(for: .signup, param: userInputFieldManager.paramDict()) { [weak self] (status, json, error) in
             guard let self = self else {
                 return
             }
+            self.hideCentralSpinner()
             if status == .success, let jsonDict = json as? [String: Any] {
-                if let _ = jsonDict["data"] as? [String: Any] {
+                if let dataDict = jsonDict["data"] as? [String: Any] {
+                    /// Storing user data into core data
+                    User.createOrUpdateUser(dataDict)
                     DispatchQueue.main.async {
-                        self.presentDummyController()
+                        self.performSegue(withIdentifier: "segueFullDevicePairingVC", sender: nil)
                     }
                 } else {
                     self.showError(data: json)

@@ -4,42 +4,213 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Pherome.otf">
+            <string>PheromeRegular</string>
+        </array>
+        <array key="mabry-regular-pro.ttf">
+            <string>MabryPro-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--HomeVC-->
         <scene sceneID="iNT-yX-is8">
             <objects>
-                <viewController storyboardIdentifier="ViewController" id="NtH-Uz-GeA" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" id="NtH-Uz-GeA" customClass="HomeVC" customModule="BagCam" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="imE-HA-D81">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdk-Af-6Za">
-                                <rect key="frame" x="164.66666666666666" y="395.66666666666669" width="45.666666666666657" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nwx-D7-hy8">
+                                <rect key="frame" x="0.0" y="58" width="375" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Devices" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eqv-dB-EGE">
+                                        <rect key="frame" x="15" y="0.0" width="159.33333333333334" height="44"/>
+                                        <fontDescription key="fontDescription" name="PheromeRegular" family="Pherome" pointSize="45"/>
+                                        <color key="textColor" name="appBlue"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55D-W2-gL6">
+                                        <rect key="frame" x="249" y="0.0" width="111" height="44"/>
+                                        <color key="tintColor" name="appText"/>
+                                        <state key="normal" title="Add Device ">
+                                            <color key="titleColor" name="appText"/>
+                                            <imageReference key="image" image="ic_addDevice" symbolScale="small"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapBtnAddDevice:" destination="NtH-Uz-GeA" eventType="touchUpInside" id="rRu-6l-6BC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="55D-W2-gL6" secondAttribute="trailing" constant="15" id="6yD-Yd-G0D"/>
+                                    <constraint firstItem="55D-W2-gL6" firstAttribute="top" secondItem="nwx-D7-hy8" secondAttribute="top" id="EEz-eS-mJI"/>
+                                    <constraint firstAttribute="bottom" secondItem="55D-W2-gL6" secondAttribute="bottom" id="EUn-DY-Go5"/>
+                                    <constraint firstAttribute="bottom" secondItem="Eqv-dB-EGE" secondAttribute="bottom" id="Tlh-8x-5Vu"/>
+                                    <constraint firstItem="Eqv-dB-EGE" firstAttribute="top" secondItem="nwx-D7-hy8" secondAttribute="top" id="mbq-we-rBd"/>
+                                    <constraint firstAttribute="height" constant="44" id="oge-Mr-THC"/>
+                                    <constraint firstItem="Eqv-dB-EGE" firstAttribute="leading" secondItem="nwx-D7-hy8" secondAttribute="leading" constant="15" id="yWt-qZ-6fp"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Pg-z8-Hob">
+                                <rect key="frame" x="0.0" y="102" width="375" height="676"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="NtH-Uz-GeA" id="swm-qy-swh"/>
+                                    <outlet property="delegate" destination="NtH-Uz-GeA" id="VBJ-h0-ysf"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="y7Z-8L-huo"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="appGray"/>
                         <constraints>
-                            <constraint firstItem="vdk-Af-6Za" firstAttribute="centerY" secondItem="imE-HA-D81" secondAttribute="centerY" id="3nY-TX-iIO"/>
-                            <constraint firstItem="vdk-Af-6Za" firstAttribute="centerX" secondItem="imE-HA-D81" secondAttribute="centerX" id="xZc-SL-ldy"/>
+                            <constraint firstItem="nwx-D7-hy8" firstAttribute="leading" secondItem="y7Z-8L-huo" secondAttribute="leading" id="6oA-jf-A2a"/>
+                            <constraint firstItem="y7Z-8L-huo" firstAttribute="trailing" secondItem="nwx-D7-hy8" secondAttribute="trailing" id="Db9-2s-5qF"/>
+                            <constraint firstItem="y7Z-8L-huo" firstAttribute="trailing" secondItem="0Pg-z8-Hob" secondAttribute="trailing" id="QxN-wt-Hxz"/>
+                            <constraint firstItem="0Pg-z8-Hob" firstAttribute="leading" secondItem="y7Z-8L-huo" secondAttribute="leading" id="aqe-EA-7lQ"/>
+                            <constraint firstItem="nwx-D7-hy8" firstAttribute="top" secondItem="y7Z-8L-huo" secondAttribute="top" constant="14" id="gW6-0F-iCD"/>
+                            <constraint firstItem="y7Z-8L-huo" firstAttribute="bottom" secondItem="0Pg-z8-Hob" secondAttribute="bottom" id="q2N-C6-5O0"/>
+                            <constraint firstItem="0Pg-z8-Hob" firstAttribute="top" secondItem="nwx-D7-hy8" secondAttribute="bottom" id="tIZ-AT-6XF"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="60x-DV-ed9"/>
+                    <connections>
+                        <outlet property="btnAddDevice" destination="55D-W2-gL6" id="sbX-8W-uPQ"/>
+                        <outlet property="tableView" destination="0Pg-z8-Hob" id="Qbd-nu-s5v"/>
+                        <segue destination="eG4-BB-7bJ" kind="show" identifier="segueFullDevicePairingVC" id="tGh-dQ-btW"/>
+                        <segue destination="Knc-oK-LNU" kind="show" identifier="segueDeviceSettingVC" id="9dn-8n-5Bh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cTE-L5-IPM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-364" y="104"/>
+            <point key="canvasLocation" x="396" y="103"/>
+        </scene>
+        <!--FullDevicePairingVC-->
+        <scene sceneID="r8N-6q-i8w">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Entry" referencedIdentifier="FullDevicePairingVC" id="eG4-BB-7bJ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="oTb-RS-5dV"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z1J-On-l9u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1097" y="-102"/>
+        </scene>
+        <!--Device SettingVC-->
+        <scene sceneID="xmk-09-T5h">
+            <objects>
+                <viewController storyboardIdentifier="DeviceSettingVC" id="Knc-oK-LNU" customClass="DeviceSettingVC" customModule="BagCam" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3iT-x2-bql">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ckb-yF-mff">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zwC-pM-bug">
+                                        <rect key="frame" x="15" y="0.0" width="61" height="44"/>
+                                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="17"/>
+                                        <state key="normal" title="← Back">
+                                            <color key="titleColor" name="appText"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapParentBtnBack:" destination="Knc-oK-LNU" eventType="touchUpInside" id="bCL-tD-kGe"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Device Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HrA-sv-zsp">
+                                        <rect key="frame" x="128" y="11.666666666666664" width="119.33333333333331" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="appBlack"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="4qj-uS-xlP"/>
+                                    <constraint firstItem="zwC-pM-bug" firstAttribute="leading" secondItem="ckb-yF-mff" secondAttribute="leading" constant="15" id="GbY-c4-TUa"/>
+                                    <constraint firstItem="zwC-pM-bug" firstAttribute="top" secondItem="ckb-yF-mff" secondAttribute="top" id="cHl-uh-7oP"/>
+                                    <constraint firstItem="HrA-sv-zsp" firstAttribute="centerX" secondItem="ckb-yF-mff" secondAttribute="centerX" id="e6g-De-Efh"/>
+                                    <constraint firstItem="HrA-sv-zsp" firstAttribute="centerY" secondItem="ckb-yF-mff" secondAttribute="centerY" id="mmc-EN-gZS"/>
+                                    <constraint firstAttribute="bottom" secondItem="zwC-pM-bug" secondAttribute="bottom" id="vkU-un-qHG"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hsh-Wt-T4a">
+                                <rect key="frame" x="15" y="618" width="345" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="y7B-ok-SNa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="REMOVE DEVICE">
+                                    <color key="titleColor" name="appText"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="appText"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius1">
+                                        <real key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tapBtnRemoveDevice:" destination="Knc-oK-LNU" eventType="touchUpInside" id="f3F-Jg-sj0"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="by6-Eh-C1T">
+                                <rect key="frame" x="0.0" y="44" width="375" height="566"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Knc-oK-LNU" id="leo-r6-0Qs"/>
+                                    <outlet property="delegate" destination="Knc-oK-LNU" id="349-ck-fUF"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jNW-kF-zgx"/>
+                        <color key="backgroundColor" name="appGray"/>
+                        <constraints>
+                            <constraint firstItem="by6-Eh-C1T" firstAttribute="leading" secondItem="jNW-kF-zgx" secondAttribute="leading" id="Mla-t1-0fs"/>
+                            <constraint firstItem="Hsh-Wt-T4a" firstAttribute="leading" secondItem="jNW-kF-zgx" secondAttribute="leading" constant="15" id="O1s-uc-6i6"/>
+                            <constraint firstItem="Hsh-Wt-T4a" firstAttribute="top" secondItem="by6-Eh-C1T" secondAttribute="bottom" constant="8" id="Qx4-px-5zX"/>
+                            <constraint firstAttribute="trailing" secondItem="ckb-yF-mff" secondAttribute="trailing" id="SM0-Qv-V83"/>
+                            <constraint firstAttribute="trailing" secondItem="by6-Eh-C1T" secondAttribute="trailing" id="Urb-e7-tH9"/>
+                            <constraint firstItem="ckb-yF-mff" firstAttribute="top" secondItem="jNW-kF-zgx" secondAttribute="top" id="fXl-TV-CLr"/>
+                            <constraint firstItem="ckb-yF-mff" firstAttribute="leading" secondItem="jNW-kF-zgx" secondAttribute="leading" id="rqi-Cq-jgE"/>
+                            <constraint firstItem="jNW-kF-zgx" firstAttribute="trailing" secondItem="Hsh-Wt-T4a" secondAttribute="trailing" constant="15" id="uHD-Qa-7oI"/>
+                            <constraint firstItem="by6-Eh-C1T" firstAttribute="top" secondItem="ckb-yF-mff" secondAttribute="bottom" id="uoS-AN-u4S"/>
+                            <constraint firstItem="jNW-kF-zgx" firstAttribute="bottom" secondItem="Hsh-Wt-T4a" secondAttribute="bottom" constant="56" id="vW4-7S-wyd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="WZX-jy-2lv"/>
+                    <connections>
+                        <outlet property="btnRemoveDevice" destination="Hsh-Wt-T4a" id="kkg-Eg-peU"/>
+                        <outlet property="tableView" destination="by6-Eh-C1T" id="IKC-Us-0bo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4zX-gl-uUl" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1217" y="103"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="ic_addDevice" width="14" height="14"/>
+        <namedColor name="appBlack">
+            <color red="0.13725490196078433" green="0.12156862745098039" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="appBlue">
+            <color red="0.10588235294117647" green="0.47843137254901963" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="appGray">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="appText">
+            <color red="0.68235294117647061" green="0.66274509803921566" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

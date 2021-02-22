@@ -188,7 +188,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="gmc-zr-kQt"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="17"/>
                                 <state key="normal" title="Forgot Password?">
                                     <color key="titleColor" name="appText"/>
                                 </state>
@@ -335,6 +335,7 @@
                     <connections>
                         <outlet property="btnSignup" destination="s0X-Co-RSV" id="d5k-8M-gql"/>
                         <outlet property="tableView" destination="acQ-qo-P2G" id="Ncq-ky-Wru"/>
+                        <segue destination="fHS-b2-l9v" kind="show" identifier="segueFullDevicePairingVC" id="ayP-pk-7YA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gwM-cI-UwY" sceneMemberID="firstResponder"/>
@@ -370,7 +371,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="eab-cI-otb"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="17"/>
                                 <state key="normal" title="Forgot Password?">
                                     <color key="titleColor" name="appText"/>
                                 </state>
@@ -465,7 +466,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="iGd-Tr-PEp"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="17"/>
                                 <state key="normal" title="Need more help?">
                                     <color key="titleColor" name="appText"/>
                                 </state>
@@ -547,7 +548,7 @@
                                 <rect key="frame" x="15" y="653" width="345" height="50"/>
                                 <color key="backgroundColor" name="appBlack"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                <state key="normal" title="VERIFY →">
+                                <state key="normal" title="RESET">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -623,11 +624,146 @@
                     <connections>
                         <outlet property="btnResetPassword" destination="rTQ-il-Gg1" id="dEs-hK-GyQ"/>
                         <outlet property="tableView" destination="TBS-fo-CyZ" id="J3C-08-uW5"/>
+                        <segue destination="eRI-yz-6T7" kind="unwind" identifier="segueLoginVC" unwindAction="unwindLogin:" id="gnV-Pq-hWg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mv3-Fe-5e5" sceneMemberID="firstResponder"/>
+                <exit id="eRI-yz-6T7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4714" y="75"/>
+        </scene>
+        <!--Full Device PairingVC-->
+        <scene sceneID="cK8-ba-OBE">
+            <objects>
+                <viewController storyboardIdentifier="FullDevicePairingVC" id="fHS-b2-l9v" customClass="FullDevicePairingVC" customModule="BagCam" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BNI-pB-YVV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgt-As-T27">
+                                <rect key="frame" x="15" y="720" width="345" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ccl-fj-6TE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="17"/>
+                                <state key="normal" title="I dont have any devices.">
+                                    <color key="titleColor" name="appText"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapBtnIDontHaveDevice:" destination="fHS-b2-l9v" eventType="touchUpInside" id="dXg-Jl-HUH"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d8r-le-yFv">
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="eSs-sK-gdq"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bus-El-qPa">
+                                <rect key="frame" x="0.0" y="88" width="375" height="632"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="fHS-b2-l9v" id="N00-pu-X3R"/>
+                                    <outlet property="delegate" destination="fHS-b2-l9v" id="vgt-lJ-rkJ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lD2-Vp-d4C"/>
+                        <color key="backgroundColor" name="appGray"/>
+                        <constraints>
+                            <constraint firstItem="Bus-El-qPa" firstAttribute="leading" secondItem="lD2-Vp-d4C" secondAttribute="leading" id="FT6-wv-8Yb"/>
+                            <constraint firstItem="sgt-As-T27" firstAttribute="top" secondItem="Bus-El-qPa" secondAttribute="bottom" id="JPQ-wW-eHj"/>
+                            <constraint firstItem="lD2-Vp-d4C" firstAttribute="trailing" secondItem="sgt-As-T27" secondAttribute="trailing" constant="15" id="NsX-Ri-abA"/>
+                            <constraint firstItem="d8r-le-yFv" firstAttribute="leading" secondItem="lD2-Vp-d4C" secondAttribute="leading" id="Rx5-bX-3be"/>
+                            <constraint firstItem="d8r-le-yFv" firstAttribute="top" secondItem="lD2-Vp-d4C" secondAttribute="top" id="cFr-4p-94A"/>
+                            <constraint firstItem="Bus-El-qPa" firstAttribute="top" secondItem="d8r-le-yFv" secondAttribute="bottom" id="e74-NG-gac"/>
+                            <constraint firstItem="sgt-As-T27" firstAttribute="bottom" secondItem="lD2-Vp-d4C" secondAttribute="bottom" constant="-8" id="fE4-4e-Eq3"/>
+                            <constraint firstItem="lD2-Vp-d4C" firstAttribute="trailing" secondItem="d8r-le-yFv" secondAttribute="trailing" id="jRv-cH-z6h"/>
+                            <constraint firstItem="Bus-El-qPa" firstAttribute="trailing" secondItem="lD2-Vp-d4C" secondAttribute="trailing" id="k0E-Cg-fjJ"/>
+                            <constraint firstItem="sgt-As-T27" firstAttribute="leading" secondItem="lD2-Vp-d4C" secondAttribute="leading" constant="15" id="qZO-6u-LD6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="qMZ-Rf-CE2"/>
+                    <connections>
+                        <outlet property="btnIDontHaveDevice" destination="sgt-As-T27" id="KxK-2U-2gu"/>
+                        <outlet property="tableView" destination="Bus-El-qPa" id="nB1-Ns-hFu"/>
+                        <segue destination="zb1-5e-fch" kind="show" identifier="segueFullDevicePairedSuccessfullyVC" id="y2z-Qy-x0h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i22-cR-cUU" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2329" y="804"/>
+        </scene>
+        <!--Full Device Paired SuccessfullyVC-->
+        <scene sceneID="i8N-cb-MCk">
+            <objects>
+                <viewController storyboardIdentifier="FullDevicePairedSuccessfullyVC" id="zb1-5e-fch" customClass="FullDevicePairedSuccessfullyVC" customModule="BagCam" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rlb-Uo-wgX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXS-pL-fI7">
+                                <rect key="frame" x="15" y="720" width="345" height="50"/>
+                                <color key="backgroundColor" name="appBlack"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="KMH-JF-hXm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <state key="normal" title="FINISH SETUP">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius1">
+                                        <real key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tapBtnFinishSetup:" destination="zb1-5e-fch" eventType="touchUpInside" id="q03-fR-OiW"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ofv-ZO-byS">
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="0ML-6F-Tl3"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hKY-vP-KDf">
+                                <rect key="frame" x="0.0" y="88" width="375" height="632"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="zb1-5e-fch" id="j18-7k-nNE"/>
+                                    <outlet property="delegate" destination="zb1-5e-fch" id="Qdn-AB-Fdx"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2dH-1x-nIr"/>
+                        <color key="backgroundColor" name="appGray"/>
+                        <constraints>
+                            <constraint firstItem="ofv-ZO-byS" firstAttribute="leading" secondItem="2dH-1x-nIr" secondAttribute="leading" id="6v1-t0-GPC"/>
+                            <constraint firstItem="2dH-1x-nIr" firstAttribute="bottom" secondItem="CXS-pL-fI7" secondAttribute="bottom" constant="8" id="8wL-fL-swu"/>
+                            <constraint firstItem="hKY-vP-KDf" firstAttribute="trailing" secondItem="2dH-1x-nIr" secondAttribute="trailing" id="HP0-XC-top"/>
+                            <constraint firstItem="CXS-pL-fI7" firstAttribute="top" secondItem="hKY-vP-KDf" secondAttribute="bottom" id="Iwz-lO-grI"/>
+                            <constraint firstItem="2dH-1x-nIr" firstAttribute="trailing" secondItem="CXS-pL-fI7" secondAttribute="trailing" constant="15" id="OrR-im-2fB"/>
+                            <constraint firstItem="CXS-pL-fI7" firstAttribute="leading" secondItem="2dH-1x-nIr" secondAttribute="leading" constant="15" id="TMi-ZP-3bH"/>
+                            <constraint firstItem="2dH-1x-nIr" firstAttribute="trailing" secondItem="ofv-ZO-byS" secondAttribute="trailing" id="VRe-Dw-7Nu"/>
+                            <constraint firstItem="hKY-vP-KDf" firstAttribute="top" secondItem="ofv-ZO-byS" secondAttribute="bottom" id="ot1-So-R3Z"/>
+                            <constraint firstItem="ofv-ZO-byS" firstAttribute="top" secondItem="2dH-1x-nIr" secondAttribute="top" id="xu5-vV-VDv"/>
+                            <constraint firstItem="hKY-vP-KDf" firstAttribute="leading" secondItem="2dH-1x-nIr" secondAttribute="leading" id="zzi-ir-K7t"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="WF3-jL-6Os"/>
+                    <connections>
+                        <outlet property="btnFinishSetup" destination="CXS-pL-fI7" id="b8p-Vs-ALb"/>
+                        <outlet property="tableView" destination="hKY-vP-KDf" id="thp-ed-jhp"/>
+                        <segue destination="elC-at-qj5" kind="unwind" identifier="segueHomeVC" unwindAction="unwindHomeVC:" id="u2t-iR-GvA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zFM-1S-f2Q" sceneMemberID="firstResponder"/>
+                <exit id="elC-at-qj5" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3158" y="804"/>
         </scene>
     </scenes>
     <resources>

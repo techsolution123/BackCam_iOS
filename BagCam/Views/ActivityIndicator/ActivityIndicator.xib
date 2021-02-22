@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="vUU-0Q-2Gf" customClass="ActivityIndicator" customModule="BagCam" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XHU-u5-Nan">
+                    <rect key="frame" x="182" y="65" width="50" height="50"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Qk-ej-Sk6">
+                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <color key="backgroundColor" name="appGray"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="gB6-C4-R7r"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="gCJ-3e-5hG"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                    <color key="value" red="0.11764705882352941" green="0.20784313725490194" blue="0.36862745098039218" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                    <real key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                    <real key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                    <size key="value" width="0.0" height="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="R8m-gE-8yy">
+                            <rect key="frame" x="15" y="10" width="20" height="20"/>
+                            <color key="color" name="appBlack"/>
+                        </activityIndicatorView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9jL-5h-nKf">
+                            <rect key="frame" x="10" y="35" width="30" height="7"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                            <color key="textColor" name="appBlack"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="0Qk-ej-Sk6" secondAttribute="trailing" id="35R-Ze-bL2"/>
+                        <constraint firstItem="0Qk-ej-Sk6" firstAttribute="top" secondItem="XHU-u5-Nan" secondAttribute="top" id="8Sj-dU-gE0"/>
+                        <constraint firstAttribute="bottom" secondItem="9jL-5h-nKf" secondAttribute="bottom" constant="8" id="ADy-l0-04f"/>
+                        <constraint firstItem="9jL-5h-nKf" firstAttribute="leading" secondItem="XHU-u5-Nan" secondAttribute="leading" constant="10" id="Ob7-Fd-GWm"/>
+                        <constraint firstItem="9jL-5h-nKf" firstAttribute="top" secondItem="R8m-gE-8yy" secondAttribute="bottom" constant="5" id="SE6-RZ-iJv"/>
+                        <constraint firstItem="R8m-gE-8yy" firstAttribute="centerX" secondItem="XHU-u5-Nan" secondAttribute="centerX" id="YHj-Bv-c8d"/>
+                        <constraint firstAttribute="bottom" secondItem="0Qk-ej-Sk6" secondAttribute="bottom" id="fob-xy-rrf"/>
+                        <constraint firstAttribute="trailing" secondItem="9jL-5h-nKf" secondAttribute="trailing" constant="10" id="ibM-vw-JGk"/>
+                        <constraint firstItem="0Qk-ej-Sk6" firstAttribute="leading" secondItem="XHU-u5-Nan" secondAttribute="leading" id="lws-0A-pef"/>
+                        <constraint firstItem="R8m-gE-8yy" firstAttribute="top" secondItem="XHU-u5-Nan" secondAttribute="top" constant="10" id="zVO-nq-ive"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="cqh-4u-P91"/>
+            <color key="backgroundColor" white="1" alpha="0.050000000000000003" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="XHU-u5-Nan" firstAttribute="centerX" secondItem="vUU-0Q-2Gf" secondAttribute="centerX" id="4Rp-us-pVH"/>
+                <constraint firstItem="XHU-u5-Nan" firstAttribute="centerY" secondItem="vUU-0Q-2Gf" secondAttribute="centerY" id="HHI-7H-Ts6"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XHU-u5-Nan" secondAttribute="trailing" constant="20" id="Ynk-9d-LB5"/>
+                <constraint firstItem="XHU-u5-Nan" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vUU-0Q-2Gf" secondAttribute="leading" constant="20" id="lxH-FQ-Ham"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="actv" destination="R8m-gE-8yy" id="I5K-I1-8dI"/>
+                <outlet property="containerView" destination="XHU-u5-Nan" id="f12-tK-8n2"/>
+                <outlet property="lblMessage" destination="9jL-5h-nKf" id="XYj-Id-LLm"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="113"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="appBlack">
+            <color red="0.13725490196078433" green="0.12156862745098039" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="appGray">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

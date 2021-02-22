@@ -17,6 +17,9 @@ class VerificationVC: ParentVC {
     /// Variable Declaration(s)
     var userInputFieldManager: UserInputFieldManager = UserInputFieldManager(.verifyCode)
     
+    /// Carried Variable
+    var emailUserInputFieldManager: UserInputFieldManager!
+    
     /// View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +33,8 @@ class VerificationVC: ParentVC {
     ///   - sender: can be nil or carried the content data
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueResetPasswordVC" {
-            
+            let destVC = segue.destination as! ResetPasswordVC
+            destVC.emailUserInputFieldManager = self.emailUserInputFieldManager
         }
     }
 }
@@ -52,7 +56,18 @@ extension VerificationVC {
 extension VerificationVC {
     
     @IBAction func tapBtnVerify(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "segueResetPasswordVC", sender: nil)
+        let value = self.userInputFieldManager.isValidData()
+        if value.valid {
+            /// WebCall(s)
+            self.webVerificationCode()
+        } else {
+            userInputFieldManager.arrUserInputFieldModel[value.index].isValid = false
+            userInputFieldManager.arrUserInputFieldModel[value.index].errorMessage = value.error
+            /// Reloading tableView in main thread
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
     
     @IBAction func tapBtnNeedMoreHelp(_ sender: UIButton) {
@@ -91,5 +106,28 @@ extension VerificationVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+// MARK: - WebCall(s)
+extension VerificationVC {
+    
+    func webVerificationCode() {
+        let params: [String: Any] = self.emailUserInputFieldManager.paramDict().merge(userInputFieldManager.paramDict())
+        showCentralSpinner()
+        Webservice.shared.request(for: .verificationCode, param: params) { [weak self] (status, json, error) in
+            guard let self = self else {
+                return
+            }
+            self.hideCentralSpinner()
+            if status == .success {
+                /// Navigating user to Reset Password Screen.
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "segueResetPasswordVC", sender: nil)
+                }
+            } else {
+                self.showError(data: json)
+            }
+        }
     }
 }

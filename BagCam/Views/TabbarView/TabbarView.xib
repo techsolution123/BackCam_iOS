@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Mabry Pro Medium.ttf">
+            <string>MabryPro-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TabbarView" customModule="BagCam" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1kv-Wy-dvr">
+                    <rect key="frame" x="0.0" y="812" width="414" height="84"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X6s-hV-YCf">
+                    <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Pa-XA-GtV">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
+                            <color key="backgroundColor" name="appBlue"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="fRm-YQ-ivF"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCM-1q-6A7">
+                            <rect key="frame" x="0.0" y="0.0" width="103.5" height="3"/>
+                            <color key="backgroundColor" name="appBlue"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="3" id="Bwi-dX-tpF"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3Wr-iC-6DA">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndc-im-S3b">
+                                    <rect key="frame" x="0.0" y="0.0" width="103.5" height="50"/>
+                                    <fontDescription key="fontDescription" name="MabryPro-Medium" family="Mabry Pro" pointSize="12"/>
+                                    <color key="tintColor" name="appBlue"/>
+                                    <state key="normal" title="DEVICES">
+                                        <color key="titleColor" name="appBlack"/>
+                                    </state>
+                                    <state key="selected" title=" DEVICES" image="ic_tabbarSelectedCircle">
+                                        <color key="titleColor" name="appBlue"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="tapBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="Zky-Qw-HKO"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="be4-0F-rn9">
+                                    <rect key="frame" x="103.5" y="0.0" width="103.5" height="50"/>
+                                    <fontDescription key="fontDescription" name="MabryPro-Medium" family="Mabry Pro" pointSize="12"/>
+                                    <color key="tintColor" name="appBlue"/>
+                                    <state key="normal" title="LIBRARY">
+                                        <color key="titleColor" name="appBlack"/>
+                                    </state>
+                                    <state key="selected" title=" LIBRARY" image="ic_tabbarSelectedCircle">
+                                        <color key="titleColor" name="appBlue"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="tapBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="o5d-MG-H6Y"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOY-gX-JmY">
+                                    <rect key="frame" x="207" y="0.0" width="103.5" height="50"/>
+                                    <fontDescription key="fontDescription" name="MabryPro-Medium" family="Mabry Pro" pointSize="12"/>
+                                    <color key="tintColor" name="appBlue"/>
+                                    <state key="normal" title="LOCATION">
+                                        <color key="titleColor" name="appBlack"/>
+                                    </state>
+                                    <state key="selected" title=" LOCATION" image="ic_tabbarSelectedCircle">
+                                        <color key="titleColor" name="appBlue"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="tapBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="0ZZ-98-02m"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjd-1t-PUp">
+                                    <rect key="frame" x="310.5" y="0.0" width="103.5" height="50"/>
+                                    <fontDescription key="fontDescription" name="MabryPro-Medium" family="Mabry Pro" pointSize="12"/>
+                                    <color key="tintColor" name="appBlue"/>
+                                    <state key="normal" title="SETTINGS">
+                                        <color key="titleColor" name="appBlack"/>
+                                    </state>
+                                    <state key="selected" title=" SETTINGS" image="ic_tabbarSelectedCircle">
+                                        <color key="titleColor" name="appBlue"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="tapBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="ba2-f7-gPD"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="pCM-1q-6A7" firstAttribute="leading" secondItem="X6s-hV-YCf" secondAttribute="leading" id="9Bs-oE-l5B"/>
+                        <constraint firstAttribute="trailing" secondItem="3Wr-iC-6DA" secondAttribute="trailing" id="HWI-XO-uZY"/>
+                        <constraint firstAttribute="trailing" secondItem="8Pa-XA-GtV" secondAttribute="trailing" id="Rfj-1x-Pdu"/>
+                        <constraint firstAttribute="bottom" secondItem="3Wr-iC-6DA" secondAttribute="bottom" id="SpL-kQ-elx"/>
+                        <constraint firstItem="3Wr-iC-6DA" firstAttribute="leading" secondItem="X6s-hV-YCf" secondAttribute="leading" id="W3f-mL-ox1"/>
+                        <constraint firstItem="3Wr-iC-6DA" firstAttribute="top" secondItem="X6s-hV-YCf" secondAttribute="top" id="YUP-Eg-dYY"/>
+                        <constraint firstAttribute="height" constant="50" id="ovy-Ny-OUH"/>
+                        <constraint firstItem="8Pa-XA-GtV" firstAttribute="leading" secondItem="X6s-hV-YCf" secondAttribute="leading" id="p82-ye-8hC"/>
+                        <constraint firstItem="pCM-1q-6A7" firstAttribute="top" secondItem="X6s-hV-YCf" secondAttribute="top" id="qSc-la-7Hd"/>
+                        <constraint firstItem="pCM-1q-6A7" firstAttribute="width" secondItem="ndc-im-S3b" secondAttribute="width" id="tNH-JD-8Qa"/>
+                        <constraint firstItem="8Pa-XA-GtV" firstAttribute="top" secondItem="X6s-hV-YCf" secondAttribute="top" id="vvy-7u-8N9"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="1kv-Wy-dvr" secondAttribute="trailing" id="10U-Is-tsD"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="X6s-hV-YCf" secondAttribute="trailing" id="1Sv-ws-PRJ"/>
+                <constraint firstItem="X6s-hV-YCf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="HD1-oj-ueB"/>
+                <constraint firstItem="1kv-Wy-dvr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="XpD-Ec-MmP"/>
+                <constraint firstItem="X6s-hV-YCf" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="bhf-EK-COB"/>
+                <constraint firstAttribute="bottom" secondItem="1kv-Wy-dvr" secondAttribute="bottom" id="ffH-DG-AKZ"/>
+                <constraint firstItem="1kv-Wy-dvr" firstAttribute="top" secondItem="X6s-hV-YCf" secondAttribute="top" id="spY-5J-TQh"/>
+            </constraints>
+            <connections>
+                <outlet property="lblSlider" destination="pCM-1q-6A7" id="CaZ-Jz-jcy"/>
+                <outlet property="lblSliderLeadingConstraint" destination="9Bs-oE-l5B" id="mnu-Tx-cYZ"/>
+                <outletCollection property="arrBtn" destination="ndc-im-S3b" collectionClass="NSMutableArray" id="Gyw-hO-rCL"/>
+                <outletCollection property="arrBtn" destination="be4-0F-rn9" collectionClass="NSMutableArray" id="SE4-GK-pWJ"/>
+                <outletCollection property="arrBtn" destination="aOY-gX-JmY" collectionClass="NSMutableArray" id="zh4-iY-CTf"/>
+                <outletCollection property="arrBtn" destination="qjd-1t-PUp" collectionClass="NSMutableArray" id="bCc-TO-qBZ"/>
+            </connections>
+            <point key="canvasLocation" x="35" y="68"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_tabbarSelectedCircle" width="7" height="7"/>
+        <namedColor name="appBlack">
+            <color red="0.13725490196078433" green="0.12156862745098039" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="appBlue">
+            <color red="0.10588235294117647" green="0.47843137254901963" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

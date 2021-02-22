@@ -41,6 +41,8 @@ class Webservice {
         case login = "login"
         case signup = "register"
         case forgotPassword = "forgot-password"
+        case verificationCode = "verification-code"
+        case resetPassword = "reset-password"
     }
     
     enum HeaderType: String {

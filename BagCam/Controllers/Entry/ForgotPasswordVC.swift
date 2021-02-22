@@ -29,7 +29,8 @@ class ForgotPasswordVC: ParentVC {
     ///   - sender: can be nil or carried the content data
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueVerificationVC" {
-            
+            let destVC = segue.destination as! VerificationVC
+            destVC.emailUserInputFieldManager = self.userInputFieldManager
         }
     }
 }
@@ -51,12 +52,17 @@ extension ForgotPasswordVC {
 extension ForgotPasswordVC {
     
     @IBAction func tapBtnSend(_ sender: UIButton) {
-        let isValid = self.userInputFieldManager.arrUserInputFieldModel.allSatisfy { (model) -> Bool in
-            return model.isValid
-        }
-        if isValid {
+        let value = self.userInputFieldManager.isValidData()
+        if value.valid {
             /// WebCall(s)
             self.webForgotPassword()
+        } else {
+            userInputFieldManager.arrUserInputFieldModel[value.index].isValid = false
+            userInputFieldManager.arrUserInputFieldModel[value.index].errorMessage = value.error
+            /// Reloading tableView in main thread
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
     }
 }
@@ -65,29 +71,27 @@ extension ForgotPasswordVC {
 extension ForgotPasswordVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return userInputFieldManager.arrUserInputFieldModel.count + 2
+        return userInputFieldManager.arrUserInputFieldModel.count + 1
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
-            return 181
-        } else if indexPath.row == 1 {
-            return 109
+            return 250
         }
         return 100
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 || indexPath.row == 1 {
+        if indexPath.row == 0 {
             /// TitleTableCell
             let cell = tableView.dequeueReusableCell(withIdentifier: "TitleTableCell", for: indexPath) as! TitleTableCell
             cell.tag = indexPath.row
-            cell.userInputFieldType = (indexPath.row == 0) ? .forgotPassword : .forgotPasswordSub
+            cell.userInputFieldType = userInputFieldManager.type
             return cell
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserInputFiledTableCell", for: indexPath) as! UserInputFiledTableCell
         cell.parentVC = self
-        cell.tag = indexPath.row - 2
+        cell.tag = indexPath.row - 1
         cell.userInputFieldManager = self.userInputFieldManager
         return cell
     }
@@ -101,10 +105,12 @@ extension ForgotPasswordVC: UITableViewDelegate, UITableViewDataSource {
 extension ForgotPasswordVC {
     
     func webForgotPassword() {
+        showCentralSpinner()
         Webservice.shared.request(for: .forgotPassword, param: self.userInputFieldManager.paramDict()) { [weak self] (status, json, error) in
             guard let self = self else {
                 return
             }
+            self.hideCentralSpinner()
             if status == .success, let jsonDict = json as? [String: Any] {
                 let message: String = jsonDict["message"] as! String
                 if !message.isEmpty {

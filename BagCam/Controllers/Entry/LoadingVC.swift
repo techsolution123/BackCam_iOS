@@ -21,7 +21,7 @@ class LoadingVC: ParentVC {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        navigateUserToWelcomeScreenAfter(1.0)
+        navigateUserToHomeOrWelcomeAfter(1.0)
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -55,10 +55,13 @@ extension LoadingVC {
         self.lblVersion.text = infoStr
     }
     
-    func navigateUserToWelcomeScreenAfter(_ delay: Double) {
+    func navigateUserToHomeOrWelcomeAfter(_ delay: Double) {
         DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
-            self.performSegue(withIdentifier: "segueNavigationVCWelcomeVC", sender: nil)
+            if let _ = User.getUser() {
+                SceneDelegate.shared.redirectUserToHomeScreenIfNeeded()
+            } else {
+                self.performSegue(withIdentifier: "segueNavigationVCWelcomeVC", sender: nil)
+            }
         }
     }
 }
-

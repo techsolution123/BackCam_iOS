@@ -38,6 +38,7 @@ class UserInputFiledTableCell: UITableViewCell {
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var tfInput: TintTextField!
     @IBOutlet weak var lblLine: UILabel!
+    @IBOutlet weak var lblErrorMessage: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -59,8 +60,13 @@ class UserInputFiledTableCell: UITableViewCell {
     fileprivate func prepareDefaultFields() {
         let userInputField = userInputFieldManager.arrUserInputFieldModel[tag]
         lblTitle.text = userInputField.title
-//        lblLine.backgroundColor = userInputField.lineColor
+        lblTitle.textAlignment = userInputField.textAlignment
+        lblLine.backgroundColor = userInputField.lineColor
+        lblErrorMessage.isHidden = userInputField.isValid
+        lblErrorMessage.text = userInputField.errorMessage
+        lblErrorMessage.textAlignment = userInputField.textAlignment
         tfInput.text = userInputField.text
+        tfInput.textAlignment = userInputField.textAlignment
         tfInput.placeholder = userInputField.placeholder
         tfInput.isSecureTextEntry = false
         tfInput.autocapitalizationType = .none
@@ -129,8 +135,8 @@ class UserInputFiledTableCell: UITableViewCell {
             self.verifyCodeField()
         case .resetPassword:
             self.resetPasswordField()
-        default:
-            break
+        case .deviceName:
+            self.deviceNameField()
         }
     }
     
@@ -184,6 +190,12 @@ class UserInputFiledTableCell: UITableViewCell {
 //            textFieldRightView("ic_faceId")
         }
     }
+    
+    fileprivate func deviceNameField() {
+        if tag == 0 {
+            tfInput.textContentType = .username
+        }
+    }
 }
 
 // MARK: - UITextFieldDelegate
@@ -197,7 +209,8 @@ extension UserInputFiledTableCell: UITextFieldDelegate {
     @objc func textFieldDidEditingChange(_ sender: UITextField) {
         if let text = sender.text {
             userInputFieldManager.arrUserInputFieldModel[tag].text = text
-            userInputFieldManager.arrUserInputFieldModel[tag].isValid = userInputFieldManager.isValidData(tag)
+            userInputFieldManager.arrUserInputFieldModel[tag].isValid = true
+            lblErrorMessage?.isHidden = userInputFieldManager.arrUserInputFieldModel[tag].isValid
             lblLine?.backgroundColor = userInputFieldManager.arrUserInputFieldModel[tag].lineColor
         }
     }

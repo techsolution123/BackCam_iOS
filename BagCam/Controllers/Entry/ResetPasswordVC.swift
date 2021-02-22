@@ -16,10 +16,24 @@ class ResetPasswordVC: ParentVC {
     /// Variable Declaration(s)
     var userInputFieldManager: UserInputFieldManager = UserInputFieldManager(.resetPassword)
     
+    /// Carried Variable
+    var emailUserInputFieldManager: UserInputFieldManager!
+    
     /// View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareUI()
+    }
+    
+    // Sending data or navigating to another screen
+    ///
+    /// - Parameters:
+    ///   - segue: segue identifier can be multiple
+    ///   - sender: can be nil or carried the content data
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueLoginVC" {
+            
+        }
     }
 }
 
@@ -40,7 +54,18 @@ extension ResetPasswordVC {
 extension ResetPasswordVC {
     
     @IBAction func tapBtnResetPassword(_ sender: UIButton) {
-        
+        let value = self.userInputFieldManager.isValidData()
+        if value.valid {
+            /// WebCall(s)
+            self.webResetPassword()
+        } else {
+            userInputFieldManager.arrUserInputFieldModel[value.index].isValid = false
+            userInputFieldManager.arrUserInputFieldModel[value.index].errorMessage = value.error
+            /// Reloading tableView in main thread
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
 }
 
@@ -75,5 +100,28 @@ extension ResetPasswordVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+// MARK: - WebCall(s)
+extension ResetPasswordVC {
+    
+    func webResetPassword() {
+        let params: [String: Any] = self.emailUserInputFieldManager.paramDict().merge(userInputFieldManager.paramDict())
+        showCentralSpinner()
+        Webservice.shared.request(for: .resetPassword, param: params) { [weak self] (status, json, error) in
+            guard let self = self else {
+                return
+            }
+            self.hideCentralSpinner()
+            if status == .success {
+                /// Navigating user to Reset Password Screen.
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "segueLoginVC", sender: nil)
+                }
+            } else {
+                self.showError(data: json)
+            }
+        }
     }
 }
