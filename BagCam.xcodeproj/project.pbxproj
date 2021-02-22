@@ -22,6 +22,7 @@
 		262DBA8725DBDCC9004A6499 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262DBA8525DBDCC9004A6499 /* ActivityIndicator.swift */; };
 		262DBA8A25DBDCF3004A6499 /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262DBA8925DBDCF3004A6499 /* UIDeviceExtension.swift */; };
 		262DBA9025DBEAA6004A6499 /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262DBA8F25DBEAA6004A6499 /* DictionaryExtension.swift */; };
+		26343E2325E3A5FD00288FDD /* DevicePlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26343E2225E3A5FD00288FDD /* DevicePlayerVC.swift */; };
 		266F36C125D6778300EDAD38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266F36C025D6778300EDAD38 /* AppDelegate.swift */; };
 		266F36C325D6778300EDAD38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266F36C225D6778300EDAD38 /* SceneDelegate.swift */; };
 		266F36C525D6778300EDAD38 /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266F36C425D6778300EDAD38 /* LoadingVC.swift */; };
@@ -56,6 +57,7 @@
 		26A0160A25DD33BB003387CE /* BagImageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A0160925DD33BB003387CE /* BagImageType.swift */; };
 		26A0160E25DD392F003387CE /* FullDevicePairingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A0160D25DD392F003387CE /* FullDevicePairingVC.swift */; };
 		26A0161225DD46AD003387CE /* FullDevicePairedSuccessfullyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A0161125DD46AD003387CE /* FullDevicePairedSuccessfullyVC.swift */; };
+		26AE0D6B25E3805600B3EA39 /* FullDevicePairingVC+Bluetooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AE0D6A25E3805600B3EA39 /* FullDevicePairingVC+Bluetooth.swift */; };
 		26D5F10E25D6A62500065FC0 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D5F10D25D6A62500065FC0 /* LoginVC.swift */; };
 		26D5F11225D6AD6000065FC0 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 26D5F11125D6AD6000065FC0 /* IQKeyboardManagerSwift */; };
 		26E3555D25D6827C007B7EF1 /* ParentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E3555C25D6827C007B7EF1 /* ParentVC.swift */; };
@@ -89,6 +91,7 @@
 		262DBA8525DBDCC9004A6499 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		262DBA8925DBDCF3004A6499 /* UIDeviceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
 		262DBA8F25DBEAA6004A6499 /* DictionaryExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
+		26343E2225E3A5FD00288FDD /* DevicePlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicePlayerVC.swift; sourceTree = "<group>"; };
 		266F36BD25D6778300EDAD38 /* BagCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BagCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		266F36C025D6778300EDAD38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		266F36C225D6778300EDAD38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +128,7 @@
 		26A0160925DD33BB003387CE /* BagImageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagImageType.swift; sourceTree = "<group>"; };
 		26A0160D25DD392F003387CE /* FullDevicePairingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullDevicePairingVC.swift; sourceTree = "<group>"; };
 		26A0161125DD46AD003387CE /* FullDevicePairedSuccessfullyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullDevicePairedSuccessfullyVC.swift; sourceTree = "<group>"; };
+		26AE0D6A25E3805600B3EA39 /* FullDevicePairingVC+Bluetooth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FullDevicePairingVC+Bluetooth.swift"; sourceTree = "<group>"; };
 		26D5F10D25D6A62500065FC0 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		26E3555C25D6827C007B7EF1 /* ParentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentVC.swift; sourceTree = "<group>"; };
 		26E3556325D68339007B7EF1 /* NavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationVC.swift; sourceTree = "<group>"; };
@@ -269,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				2692C4A925DFB5C0009919D1 /* HomeVC.swift */,
+				26343E2225E3A5FD00288FDD /* DevicePlayerVC.swift */,
 				2695BE0225DFE9AB00404815 /* DeviceSettingVC.swift */,
 			);
 			path = Home;
@@ -317,6 +322,15 @@
 				26A0160225DD310E003387CE /* GeneralLabelInfoTableCell.swift */,
 			);
 			path = GeneralLabelInfoTableCell;
+			sourceTree = "<group>";
+		};
+		26AE0D6825E3804300B3EA39 /* FullDevicePairingVC */ = {
+			isa = PBXGroup;
+			children = (
+				26A0160D25DD392F003387CE /* FullDevicePairingVC.swift */,
+				26AE0D6A25E3805600B3EA39 /* FullDevicePairingVC+Bluetooth.swift */,
+			);
+			path = FullDevicePairingVC;
 			sourceTree = "<group>";
 		};
 		26E3555625D68218007B7EF1 /* Storyboards */ = {
@@ -372,7 +386,7 @@
 				261842C125D7E058006F5EBD /* ForgotPasswordVC.swift */,
 				261842C425D7E822006F5EBD /* VerificationVC.swift */,
 				262B59E825DACDA300C4C502 /* ResetPasswordVC.swift */,
-				26A0160D25DD392F003387CE /* FullDevicePairingVC.swift */,
+				26AE0D6825E3804300B3EA39 /* FullDevicePairingVC */,
 				26A0161125DD46AD003387CE /* FullDevicePairedSuccessfullyVC.swift */,
 			);
 			path = Entry;
@@ -592,6 +606,7 @@
 				266F36C525D6778300EDAD38 /* LoadingVC.swift in Sources */,
 				7468663D25DA4F72009918D4 /* UIKitExtension.swift in Sources */,
 				26E3558225D69BC1007B7EF1 /* UserInputFieldManager.swift in Sources */,
+				26AE0D6B25E3805600B3EA39 /* FullDevicePairingVC+Bluetooth.swift in Sources */,
 				2695BDF425DFDE1B00404815 /* EditDeviceNameTableCell.swift in Sources */,
 				2695BDFB25DFE26B00404815 /* DeviceInfoTableCell.swift in Sources */,
 				267B253B25DF952F00DF4BC4 /* DeviceNameTableCell.swift in Sources */,
@@ -622,6 +637,7 @@
 				262DBA8725DBDCC9004A6499 /* ActivityIndicator.swift in Sources */,
 				26E3557125D68F10007B7EF1 /* WelcomeVC.swift in Sources */,
 				7468662A25DA4C29009918D4 /* UserInputFiledTableCell.swift in Sources */,
+				26343E2325E3A5FD00288FDD /* DevicePlayerVC.swift in Sources */,
 				261842C525D7E822006F5EBD /* VerificationVC.swift in Sources */,
 				261842C225D7E058006F5EBD /* ForgotPasswordVC.swift in Sources */,
 				26A0160625DD3156003387CE /* GeneralLabelInfoType.swift in Sources */,

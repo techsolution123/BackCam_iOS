@@ -12,10 +12,13 @@ import IQKeyboardManagerSwift
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var deviceOritentation: UIInterfaceOrientationMask = .portrait
+    static var shared: AppDelegate!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        AppDelegate.shared = self
+        
         /// IQKeyboardManager
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.toolbarBarTintColor = AppColorManager.shared.appGray
@@ -25,6 +28,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         /// Dependancy injection
         _ = CoreDatabaseManager.shared
         return true
+    }
+    
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        return deviceOritentation
     }
 
     // MARK: UISceneSession Lifecycle

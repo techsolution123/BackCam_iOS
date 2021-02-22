@@ -18,6 +18,13 @@ class TabbarVC: UITabBarController {
         super.viewDidLoad()
         prepareUI()
     }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        let height: CGFloat = 50 + self.view.safeAreaInsets.bottom
+        let yPosition: CGFloat = self.view.frame.height - height
+        self.tabbarView?.frame = CGRect(x: 0, y: yPosition, width: self.view.frame.size.width, height: height)
+    }
 }
 
 // MARK: - UI Related Method(s)

@@ -29,6 +29,8 @@ class HomeVC: ParentVC {
             destVC.isFromHomeVC = true
         } else if segue.identifier == "segueDeviceSettingVC" {
             
+        } else if segue.identifier == "segueDevicePlayerVC" {
+            
         }
     }
     

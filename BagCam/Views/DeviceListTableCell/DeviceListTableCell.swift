@@ -47,7 +47,7 @@ class DeviceListTableCell: UITableViewCell {
 extension DeviceListTableCell {
     
     @IBAction func tapBtnFullVideoScreen(_ sender: UIButton) {
-        
+        self.parentHomeVC.performSegue(withIdentifier: "segueDevicePlayerVC", sender: nil)
     }
     
     @IBAction func tapBtnGoLive(_ sender: UIButton) {

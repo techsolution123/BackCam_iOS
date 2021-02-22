@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreBluetooth
 
 /// FullDevicePairingVC
 class FullDevicePairingVC: ParentVC {
@@ -15,6 +16,8 @@ class FullDevicePairingVC: ParentVC {
     
     /// Variable Declaration(s)
     var arrDisplayCellType: [DisplayCellType] = []
+    var arrCBPeripheral: [CBPeripheral] = []
+    var cbCentralManager: CBCentralManager!
     
     /// Carried Variable
     var isFromHomeVC: Bool = false
@@ -22,7 +25,7 @@ class FullDevicePairingVC: ParentVC {
     /// DisplayCellType
     enum DisplayCellType {
         case row(_ arr: [Any])
-        case devices(_ arr: [String])
+        case devices(_ arr: [CBPeripheral])
         
         func rowHeight(_ index: Int) -> CGFloat {
             switch self {
@@ -77,6 +80,7 @@ extension FullDevicePairingVC {
     func prepareUI() {
         registerTableCell()
         prepareDisplayCellTypeData()
+        self.cbCentralManager = CBCentralManager(delegate: self, queue: .main)
     }
     
     func registerTableCell() {
@@ -93,20 +97,6 @@ extension FullDevicePairingVC {
                   GeneralLabelInfoType.holdPairing,
                   BagImageType.connect])
         ]
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-            self.arrDisplayCellType = [
-                .row([BagImageType.normal,
-                      GeneralLabelInfoType.availableDevices,
-                      GeneralLabelInfoType.selectBagCam]),
-                .devices(["BagCam Large 8294",
-                          "BagCam Carry on 3356",
-                          "BagCam Large 1098"
-                        ])
-                      
-            ]
-            /// Reloading tableView in main thread.
-            self.tableView.reloadData()
-        }
     }
 }
 
@@ -160,7 +150,7 @@ extension FullDevicePairingVC: UITableViewDelegate, UITableViewDataSource {
         case .devices(let arr):
             let cell = tableView.dequeueReusableCell(withIdentifier: "DeviceNameTableCell", for: indexPath) as! DeviceNameTableCell
             cell.tag = indexPath.row
-            cell.deviceName = arr[indexPath.row]
+            cell.deviceName = arr[indexPath.row].name
             return cell
         }
     }
