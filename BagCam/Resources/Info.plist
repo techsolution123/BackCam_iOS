@@ -73,5 +73,9 @@
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
+    <key>ITSAppUsesNonExemptEncryption</key>
+        <false/>
+    <key>NSBluetoothPeripheralUsageDescription</key>
+        <string>BagCam like to have bluetooth permission to scan bags.</string>
 </dict>
 </plist>
