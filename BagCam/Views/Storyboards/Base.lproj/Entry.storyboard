@@ -6,9 +6,13 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Mabry Pro Medium.ttf">
+            <string>MabryPro-Medium</string>
+        </array>
         <array key="mabry-regular-pro.ttf">
             <string>MabryPro-Regular</string>
         </array>
@@ -688,7 +692,7 @@
                     <connections>
                         <outlet property="btnIDontHaveDevice" destination="sgt-As-T27" id="KxK-2U-2gu"/>
                         <outlet property="tableView" destination="Bus-El-qPa" id="nB1-Ns-hFu"/>
-                        <segue destination="zb1-5e-fch" kind="show" identifier="segueFullDevicePairedSuccessfullyVC" id="y2z-Qy-x0h"/>
+                        <segue destination="Ytf-6H-bay" kind="show" identifier="segueScanQRVC" id="P7c-O3-yxw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i22-cR-cUU" sceneMemberID="firstResponder"/>
@@ -763,12 +767,112 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zFM-1S-f2Q" sceneMemberID="firstResponder"/>
                 <exit id="elC-at-qj5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
+            <point key="canvasLocation" x="3972" y="804"/>
+        </scene>
+        <!--ScanQRVC-->
+        <scene sceneID="iT7-TB-Bu7">
+            <objects>
+                <viewController storyboardIdentifier="ScanQRVC" id="Ytf-6H-bay" customClass="ScanQRVC" customModule="BagCam" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AhR-HY-U11">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fbn-JJ-lYo">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_qrCode" translatesAutoresizingMaskIntoConstraints="NO" id="Pi3-eR-1sL">
+                                <rect key="frame" x="138.66666666666666" y="297" width="98" height="98"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMq-n7-n7S">
+                                <rect key="frame" x="15" y="720" width="345" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="lo2-MU-uYy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="CANCEL">
+                                    <color key="titleColor" name="appText"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="appText"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius1">
+                                        <real key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tapParentBtnBack:" destination="Ytf-6H-bay" eventType="touchUpInside" id="luj-kw-gld"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan the Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcR-jb-XQR">
+                                <rect key="frame" x="100.66666666666667" y="415" width="173.66666666666663" height="30.333333333333314"/>
+                                <fontDescription key="fontDescription" name="MabryPro-Medium" family="Mabry Pro" pointSize="26"/>
+                                <color key="textColor" name="appBlack"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zx9-nL-DhJ">
+                                <rect key="frame" x="74.666666666666671" y="462.33333333333331" width="225.66666666666663" height="40.666666666666686"/>
+                                <string key="text">Center the QR code on your 
+BagCam Bag in the green box</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="appText"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0R6-3W-04X">
+                                <rect key="frame" x="15" y="540" width="345" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Agp-vv-3BL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="17"/>
+                                <state key="normal" title="Help me find the code">
+                                    <color key="titleColor" name="appText"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapBtnHelpMeFindTheCode:" destination="Ytf-6H-bay" eventType="touchUpInside" id="NUx-Bu-dt5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MZa-8P-5XV"/>
+                        <color key="backgroundColor" name="appGray"/>
+                        <constraints>
+                            <constraint firstItem="fbn-JJ-lYo" firstAttribute="trailing" secondItem="MZa-8P-5XV" secondAttribute="trailing" id="5v6-ai-TAT"/>
+                            <constraint firstItem="MZa-8P-5XV" firstAttribute="trailing" secondItem="0R6-3W-04X" secondAttribute="trailing" constant="15" id="A3h-xO-qDL"/>
+                            <constraint firstItem="Pi3-eR-1sL" firstAttribute="top" secondItem="fbn-JJ-lYo" secondAttribute="bottom" constant="37" id="D5A-Fi-uV5"/>
+                            <constraint firstItem="FMq-n7-n7S" firstAttribute="bottom" secondItem="MZa-8P-5XV" secondAttribute="bottom" constant="-8" id="I5d-6X-heZ"/>
+                            <constraint firstItem="dcR-jb-XQR" firstAttribute="centerX" secondItem="Pi3-eR-1sL" secondAttribute="centerX" id="Qc9-fn-8aa"/>
+                            <constraint firstItem="fbn-JJ-lYo" firstAttribute="leading" secondItem="AhR-HY-U11" secondAttribute="leading" id="SPg-Eq-7fk"/>
+                            <constraint firstItem="0R6-3W-04X" firstAttribute="top" secondItem="zx9-nL-DhJ" secondAttribute="bottom" constant="37" id="Udl-Av-Mj0"/>
+                            <constraint firstItem="fbn-JJ-lYo" firstAttribute="height" secondItem="AhR-HY-U11" secondAttribute="height" multiplier="0.32" id="X51-wS-Pn9"/>
+                            <constraint firstItem="FMq-n7-n7S" firstAttribute="leading" secondItem="MZa-8P-5XV" secondAttribute="leading" constant="15" id="Y1f-Ha-Tob"/>
+                            <constraint firstItem="fbn-JJ-lYo" firstAttribute="top" secondItem="AhR-HY-U11" secondAttribute="top" id="c7q-k8-Yap"/>
+                            <constraint firstItem="dcR-jb-XQR" firstAttribute="top" secondItem="Pi3-eR-1sL" secondAttribute="bottom" constant="20" id="hFR-3F-Ela"/>
+                            <constraint firstItem="zx9-nL-DhJ" firstAttribute="centerX" secondItem="dcR-jb-XQR" secondAttribute="centerX" id="mII-bM-ry1"/>
+                            <constraint firstItem="0R6-3W-04X" firstAttribute="leading" secondItem="MZa-8P-5XV" secondAttribute="leading" constant="15" id="nMW-DG-DeD"/>
+                            <constraint firstItem="MZa-8P-5XV" firstAttribute="trailing" secondItem="FMq-n7-n7S" secondAttribute="trailing" constant="15" id="nfO-Bd-GW6"/>
+                            <constraint firstItem="Pi3-eR-1sL" firstAttribute="centerX" secondItem="AhR-HY-U11" secondAttribute="centerX" id="u3y-wt-rKi"/>
+                            <constraint firstItem="zx9-nL-DhJ" firstAttribute="top" secondItem="dcR-jb-XQR" secondAttribute="bottom" constant="17" id="y2R-8s-bdt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="YcZ-Ua-cY8"/>
+                    <connections>
+                        <outlet property="btnHelpMeFindTheCode" destination="0R6-3W-04X" id="bxH-6X-L7h"/>
+                        <outlet property="cameraPreviewView" destination="fbn-JJ-lYo" id="IMG-uW-kDb"/>
+                        <segue destination="zb1-5e-fch" kind="show" identifier="segueFullDevicePairedSuccessfullyVC" id="dVj-kw-JAn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M8q-hP-FiC" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="3158" y="804"/>
         </scene>
     </scenes>
     <resources>
         <image name="ic_appName" width="175" height="44"/>
         <image name="ic_bag" width="133" height="225"/>
+        <image name="ic_qrCode" width="98" height="98"/>
         <namedColor name="appBlack">
             <color red="0.13725490196078433" green="0.12156862745098039" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -784,5 +888,8 @@
         <namedColor name="appText">
             <color red="0.68235294117647061" green="0.66274509803921566" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

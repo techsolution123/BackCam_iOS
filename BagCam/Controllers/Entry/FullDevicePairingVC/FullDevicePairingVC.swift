@@ -18,6 +18,7 @@ class FullDevicePairingVC: ParentVC {
     var arrDisplayCellType: [DisplayCellType] = []
     var arrCBPeripheral: [CBPeripheral] = []
     var cbCentralManager: CBCentralManager!
+    var connectedPeripheral: CBPeripheral!
     
     /// Carried Variable
     var isFromHomeVC: Bool = false
@@ -61,15 +62,21 @@ class FullDevicePairingVC: ParentVC {
         prepareUI()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.cbCentralManager?.stopScan()
+    }
+    
     // Sending data or navigating to another screen
     ///
     /// - Parameters:
     ///   - segue: segue identifier can be multiple
     ///   - sender: can be nil or carried the content data
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "segueFullDevicePairedSuccessfullyVC" {
-            let destVC = segue.destination as! FullDevicePairedSuccessfullyVC
+        if segue.identifier == "segueScanQRVC" {
+            let destVC = segue.destination as! ScanQRVC
             destVC.isFromHomeVC = self.isFromHomeVC
+            destVC.connectedPeripheral = self.connectedPeripheral
         }
     }
 }
@@ -80,7 +87,7 @@ extension FullDevicePairingVC {
     func prepareUI() {
         registerTableCell()
         prepareDisplayCellTypeData()
-        self.cbCentralManager = CBCentralManager(delegate: self, queue: .main)
+        prepareBluetoothConfiguration()
     }
     
     func registerTableCell() {
@@ -161,8 +168,9 @@ extension FullDevicePairingVC: UITableViewDelegate, UITableViewDataSource {
             switch self.arrDisplayCellType[indexPath.section] {
             case .row:
                 break
-            case .devices:
-                self.performSegue(withIdentifier: "segueFullDevicePairedSuccessfullyVC", sender: nil)
+            case .devices(let arr):
+                self.connectBluetoothDevice(arr[indexPath.row])
+                self.performSegue(withIdentifier: "segueScanQRVC", sender: nil)
             }
         }
     }

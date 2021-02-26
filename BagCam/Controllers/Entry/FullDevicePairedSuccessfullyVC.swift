@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreBluetooth
 
 /// FullDevicePairedSuccessfullyVC
 class FullDevicePairedSuccessfullyVC: ParentVC {
@@ -18,6 +19,8 @@ class FullDevicePairedSuccessfullyVC: ParentVC {
     
     /// Variable Declaration(s)
     var isFromHomeVC: Bool = false
+    var deviceId: String = ""
+    var connectedPeripheral: CBPeripheral!
     
     /// View Life Cycle
     override func viewDidLoad() {
@@ -57,12 +60,8 @@ extension FullDevicePairedSuccessfullyVC {
     @IBAction func tapBtnFinishSetup(_ sender: UIButton) {
         let value = self.userInputFieldManager.isValidData()
         if value.valid {
-            if !isFromHomeVC {
-                /// Redirecting user to Home Screen
-                SceneDelegate.shared.redirectUserToHomeScreenIfNeeded()
-            } else {
-                self.performSegue(withIdentifier: "segueHomeVC", sender: nil)
-            }
+            /// WebCall(s)
+            self.webAddDeviceInfo()
         } else {
             userInputFieldManager.arrUserInputFieldModel[value.index].isValid = false
             userInputFieldManager.arrUserInputFieldModel[value.index].errorMessage = value.error
@@ -111,5 +110,34 @@ extension FullDevicePairedSuccessfullyVC: UITableViewDelegate, UITableViewDataSo
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+// MARK: - WebCall(s)
+extension FullDevicePairedSuccessfullyVC {
+    
+    func webAddDeviceInfo() {
+        var params: [String: Any] = self.userInputFieldManager.paramDict()
+        params["user_id"] = _user.id
+        params["device_id"] = self.deviceId
+        self.showCentralSpinner()
+        Webservice.shared.request(for: .addDevice, param: params) { [weak self] (status, json, error) in
+            guard let self = self else {
+                return
+            }
+            self.hideCentralSpinner()
+            if status == .success, let _ = json as? [String: Any] {
+                DispatchQueue.main.async {
+                    if !self.isFromHomeVC {
+                        /// Redirecting user to Home Screen
+                        SceneDelegate.shared.redirectUserToHomeScreenIfNeeded()
+                    } else {
+                        self.performSegue(withIdentifier: "segueHomeVC", sender: nil)
+                    }
+                }
+            } else {
+                self.showError(data: json)
+            }
+        }
     }
 }

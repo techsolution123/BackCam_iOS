@@ -41,6 +41,14 @@ class DeviceListTableCell: UITableViewCell {
             self.btnGoLive.isHidden = !isVideoControllerHidden
         }
     }
+    
+    var deviceListModel: DeviceListModel! {
+        didSet {
+            lblVideoTime.text = deviceListModel.time_ago
+            lblTitle.text = deviceListModel.device_name
+            btnNumberOfEvent.setTitle("\(deviceListModel.number_of_event) EVENTS", for: .normal)
+        }
+    }
 }
 
 // MARK: - UIButton Action(s)
@@ -51,7 +59,10 @@ extension DeviceListTableCell {
     }
     
     @IBAction func tapBtnGoLive(_ sender: UIButton) {
-        isVideoControllerHidden = false
+//        isVideoControllerHidden = false
+        DispatchQueue.main.async {
+            self.parentHomeVC.presentLiveUrlStreamController()
+        }
     }
     
     @IBAction func tapBtnMic(_ sender: UIButton) {

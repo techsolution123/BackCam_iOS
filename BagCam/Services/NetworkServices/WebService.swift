@@ -43,6 +43,8 @@ class Webservice {
         case forgotPassword = "forgot-password"
         case verificationCode = "verification-code"
         case resetPassword = "reset-password"
+        case addDevice = "add_device"
+        case deviceList = "device-pairing"
     }
     
     enum HeaderType: String {

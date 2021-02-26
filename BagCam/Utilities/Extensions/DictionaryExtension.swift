@@ -19,6 +19,21 @@ extension Dictionary where Key == String, Value == Any {
         return ""
     }
     
+    func optionalDate(_ anything: Any?) -> Date? {
+        if let any = anything {
+            if let str = any as? String, !str.isEmpty {
+                if str.contains(find: "-") || str.contains(find: ":") {
+                    return Date.formatter1.date(from: str)
+                } else {
+                    return Date(timeIntervalSince1970: double(str))
+                }
+            } else if let str = any as? NSNumber {
+                return Date(timeIntervalSince1970: str.doubleValue)
+            }
+        }
+        return nil
+    }
+    
     func integer(_ key: String) -> Int {
         if let value = self[key] as? NSNumber {
             return value.intValue
@@ -58,8 +73,6 @@ extension Dictionary where Key == String, Value == Any {
     func merge(_ dict: [String: Any]) -> [String: Any] {
         return self.merging(dict, uniquingKeysWith: {(_, new) in new})
     }
-    
-    
 }
 
 extension Collection {
