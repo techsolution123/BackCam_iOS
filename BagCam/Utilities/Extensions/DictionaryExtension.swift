@@ -2,7 +2,7 @@
 //  DictionaryExtension.swift
 //  BagCam
 //
-//  Created by Kevin Shah on 16/02/21.
+//  Created by Pankaj Patel on 16/02/21.
 //
 
 import UIKit

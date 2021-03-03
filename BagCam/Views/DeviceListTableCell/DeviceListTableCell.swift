@@ -2,7 +2,7 @@
 //  DeviceListTableCell.swift
 //  BagCam
 //
-//  Created by Kevin Shah on 19/02/21.
+//  Created by Pankaj Patel on 19/02/21.
 //
 
 import UIKit

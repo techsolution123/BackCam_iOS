@@ -2,7 +2,7 @@
 //  SignupVC.swift
 //  BagCam
 //
-//  Created by Kevin Shah on 13/02/21.
+//  Created by Pankaj Patel on 13/02/21.
 //
 
 import UIKit

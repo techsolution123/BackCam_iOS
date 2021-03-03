@@ -2,7 +2,7 @@
 //  FullDevicePairingVC+Bluetooth.swift
 //  BagCam
 //
-//  Created by Kevin Shah on 22/02/21.
+//  Created by Pankaj Patel on 22/02/21.
 //
 
 import CoreBluetooth

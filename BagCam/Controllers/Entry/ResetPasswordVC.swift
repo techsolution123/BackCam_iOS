@@ -2,7 +2,7 @@
 //  ResetPasswordVC.swift
 //  BagCam
 //
-//  Created by Kevin Shah on 15/02/21.
+//  Created by Pankaj Patel on 15/02/21.
 //
 
 import UIKit

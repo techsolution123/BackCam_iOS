@@ -2,7 +2,7 @@
 //  ScanQRVC.swift
 //  BagCam
 //
-//  Created by Kevin Shah on 23/02/21.
+//  Created by Pankaj Patel on 23/02/21.
 //
 
 import UIKit

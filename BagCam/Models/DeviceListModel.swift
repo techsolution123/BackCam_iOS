@@ -2,7 +2,7 @@
 //  DeviceListModel.swift
 //  BagCam
 //
-//  Created by Kevin Shah on 26/02/21.
+//  Created by Pankaj Patel on 26/02/21.
 //
 
 import UIKit

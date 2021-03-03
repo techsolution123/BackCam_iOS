@@ -2,7 +2,7 @@
 //  FullDevicePairedSuccessfullyVC.swift
 //  BagCam
 //
-//  Created by Kevin Shah on 17/02/21.
+//  Created by Pankaj Patel on 17/02/21.
 //
 
 import UIKit

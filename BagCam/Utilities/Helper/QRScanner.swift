@@ -2,8 +2,8 @@
 //  QRScanner.swift
 //  QRScanner
 //
-//  Created by Kevin Shah on 08/10/19.
-//  Copyright © 2019 Kevin Shah. All rights reserved.
+//  Created by Pankaj Patel on 08/10/19.
+//  Copyright © 2019 Pankaj Patel. All rights reserved.
 //
 
 import UIKit
