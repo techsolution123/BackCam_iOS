@@ -84,7 +84,11 @@ extension ScanQRVC {
                         self.isControllerPushed = true
                         self.objOfQRScanner.stopScanning()
                         let obj0 = arrFirstQR[0] as! AVMetadataMachineReadableCodeObject
-                        let deviceId: String = obj0.stringValue ?? ""
+                        var deviceId: String = obj0.stringValue ?? ""
+                        let arrDeviceId = deviceId.split(separator: "_")
+                        if let id = arrDeviceId.last {
+                            deviceId = "\(id)"
+                        }
                         print("QRCode name: \(deviceId)")
                         let obj1 = arrFirstQR[1] as! AVMetadataObject
                         self.scannerTargetView.frame = obj1.bounds

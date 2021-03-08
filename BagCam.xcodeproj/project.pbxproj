@@ -22,6 +22,9 @@
 		262DBA8725DBDCC9004A6499 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262DBA8525DBDCC9004A6499 /* ActivityIndicator.swift */; };
 		262DBA8A25DBDCF3004A6499 /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262DBA8925DBDCF3004A6499 /* UIDeviceExtension.swift */; };
 		262DBA9025DBEAA6004A6499 /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262DBA8F25DBEAA6004A6499 /* DictionaryExtension.swift */; };
+		26343E2325E3A5FD00288FDD /* DevicePlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26343E2225E3A5FD00288FDD /* DevicePlayerVC.swift */; };
+		26493A0B25E8BDA0007DE65B /* DeviceListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26493A0A25E8BDA0007DE65B /* DeviceListModel.swift */; };
+		26493A0E25E8BEE9007DE65B /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26493A0D25E8BEE9007DE65B /* DateExtension.swift */; };
 		266F36C125D6778300EDAD38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266F36C025D6778300EDAD38 /* AppDelegate.swift */; };
 		266F36C325D6778300EDAD38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266F36C225D6778300EDAD38 /* SceneDelegate.swift */; };
 		266F36C525D6778300EDAD38 /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266F36C425D6778300EDAD38 /* LoadingVC.swift */; };
@@ -29,6 +32,8 @@
 		266F36CB25D6778300EDAD38 /* BagCam.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 266F36C925D6778300EDAD38 /* BagCam.xcdatamodeld */; };
 		266F36CD25D6778900EDAD38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 266F36CC25D6778900EDAD38 /* Assets.xcassets */; };
 		266F36D025D6778900EDAD38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 266F36CE25D6778900EDAD38 /* LaunchScreen.storyboard */; };
+		267217A225F65907002B03CE /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267217A125F65907002B03CE /* UIImageViewExtension.swift */; };
+		267217A625F659B8002B03CE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 267217A525F659B8002B03CE /* Kingfisher */; };
 		267B252225DE31B600DF4BC4 /* TabbarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 267B252125DE31B600DF4BC4 /* TabbarView.xib */; };
 		267B252825DE368F00DF4BC4 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 267B252625DE368F00DF4BC4 /* Tabbar.storyboard */; };
 		267B252D25DE36F800DF4BC4 /* TabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267B252C25DE36F800DF4BC4 /* TabbarVC.swift */; };
@@ -36,6 +41,8 @@
 		267B253825DF93BF00DF4BC4 /* DeviceNameTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 267B253725DF93BF00DF4BC4 /* DeviceNameTableCell.xib */; };
 		267B253B25DF952F00DF4BC4 /* DeviceNameTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267B253A25DF952F00DF4BC4 /* DeviceNameTableCell.swift */; };
 		267B253F25DFB41000DF4BC4 /* AddDeviceTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 267B253E25DFB41000DF4BC4 /* AddDeviceTableCell.xib */; };
+		2686669525E4D76500E6CDF3 /* ScanQRVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2686669425E4D76500E6CDF3 /* ScanQRVC.swift */; };
+		2686669A25E4DAEE00E6CDF3 /* QRScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2686669925E4DAEE00E6CDF3 /* QRScanner.swift */; };
 		2692C4A625DFB532009919D1 /* AddDeviceTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2692C4A525DFB532009919D1 /* AddDeviceTableCell.swift */; };
 		2692C4AA25DFB5C0009919D1 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2692C4A925DFB5C0009919D1 /* HomeVC.swift */; };
 		2692C4B125DFBA67009919D1 /* DeviceListTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2692C4B025DFBA67009919D1 /* DeviceListTableCell.xib */; };
@@ -56,6 +63,7 @@
 		26A0160A25DD33BB003387CE /* BagImageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A0160925DD33BB003387CE /* BagImageType.swift */; };
 		26A0160E25DD392F003387CE /* FullDevicePairingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A0160D25DD392F003387CE /* FullDevicePairingVC.swift */; };
 		26A0161225DD46AD003387CE /* FullDevicePairedSuccessfullyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A0161125DD46AD003387CE /* FullDevicePairedSuccessfullyVC.swift */; };
+		26AE0D6B25E3805600B3EA39 /* FullDevicePairingVC+Bluetooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AE0D6A25E3805600B3EA39 /* FullDevicePairingVC+Bluetooth.swift */; };
 		26D5F10E25D6A62500065FC0 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D5F10D25D6A62500065FC0 /* LoginVC.swift */; };
 		26D5F11225D6AD6000065FC0 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 26D5F11125D6AD6000065FC0 /* IQKeyboardManagerSwift */; };
 		26E3555D25D6827C007B7EF1 /* ParentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E3555C25D6827C007B7EF1 /* ParentVC.swift */; };
@@ -89,6 +97,9 @@
 		262DBA8525DBDCC9004A6499 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		262DBA8925DBDCF3004A6499 /* UIDeviceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
 		262DBA8F25DBEAA6004A6499 /* DictionaryExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
+		26343E2225E3A5FD00288FDD /* DevicePlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicePlayerVC.swift; sourceTree = "<group>"; };
+		26493A0A25E8BDA0007DE65B /* DeviceListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListModel.swift; sourceTree = "<group>"; };
+		26493A0D25E8BEE9007DE65B /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		266F36BD25D6778300EDAD38 /* BagCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BagCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		266F36C025D6778300EDAD38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		266F36C225D6778300EDAD38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +109,7 @@
 		266F36CC25D6778900EDAD38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		266F36CF25D6778900EDAD38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		266F36D125D6778900EDAD38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		267217A125F65907002B03CE /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		267B252125DE31B600DF4BC4 /* TabbarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabbarView.xib; sourceTree = "<group>"; };
 		267B252725DE368F00DF4BC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Tabbar.storyboard; sourceTree = "<group>"; };
 		267B252C25DE36F800DF4BC4 /* TabbarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarVC.swift; sourceTree = "<group>"; };
@@ -105,6 +117,8 @@
 		267B253725DF93BF00DF4BC4 /* DeviceNameTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceNameTableCell.xib; sourceTree = "<group>"; };
 		267B253A25DF952F00DF4BC4 /* DeviceNameTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceNameTableCell.swift; sourceTree = "<group>"; };
 		267B253E25DFB41000DF4BC4 /* AddDeviceTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddDeviceTableCell.xib; sourceTree = "<group>"; };
+		2686669425E4D76500E6CDF3 /* ScanQRVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRVC.swift; sourceTree = "<group>"; };
+		2686669925E4DAEE00E6CDF3 /* QRScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScanner.swift; sourceTree = "<group>"; };
 		2692C4A525DFB532009919D1 /* AddDeviceTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceTableCell.swift; sourceTree = "<group>"; };
 		2692C4A925DFB5C0009919D1 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		2692C4B025DFBA67009919D1 /* DeviceListTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceListTableCell.xib; sourceTree = "<group>"; };
@@ -125,6 +139,7 @@
 		26A0160925DD33BB003387CE /* BagImageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagImageType.swift; sourceTree = "<group>"; };
 		26A0160D25DD392F003387CE /* FullDevicePairingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullDevicePairingVC.swift; sourceTree = "<group>"; };
 		26A0161125DD46AD003387CE /* FullDevicePairedSuccessfullyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullDevicePairedSuccessfullyVC.swift; sourceTree = "<group>"; };
+		26AE0D6A25E3805600B3EA39 /* FullDevicePairingVC+Bluetooth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FullDevicePairingVC+Bluetooth.swift"; sourceTree = "<group>"; };
 		26D5F10D25D6A62500065FC0 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		26E3555C25D6827C007B7EF1 /* ParentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentVC.swift; sourceTree = "<group>"; };
 		26E3556325D68339007B7EF1 /* NavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationVC.swift; sourceTree = "<group>"; };
@@ -147,6 +162,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				267217A625F659B8002B03CE /* Kingfisher in Frameworks */,
 				26D5F11225D6AD6000065FC0 /* IQKeyboardManagerSwift in Frameworks */,
 				261842C925D7EB9D006F5EBD /* Alamofire in Frameworks */,
 			);
@@ -269,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				2692C4A925DFB5C0009919D1 /* HomeVC.swift */,
+				26343E2225E3A5FD00288FDD /* DevicePlayerVC.swift */,
 				2695BE0225DFE9AB00404815 /* DeviceSettingVC.swift */,
 			);
 			path = Home;
@@ -319,6 +336,15 @@
 			path = GeneralLabelInfoTableCell;
 			sourceTree = "<group>";
 		};
+		26AE0D6825E3804300B3EA39 /* FullDevicePairingVC */ = {
+			isa = PBXGroup;
+			children = (
+				26A0160D25DD392F003387CE /* FullDevicePairingVC.swift */,
+				26AE0D6A25E3805600B3EA39 /* FullDevicePairingVC+Bluetooth.swift */,
+			);
+			path = FullDevicePairingVC;
+			sourceTree = "<group>";
+		};
 		26E3555625D68218007B7EF1 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -348,6 +374,7 @@
 				26A0160925DD33BB003387CE /* BagImageType.swift */,
 				26A0160525DD3156003387CE /* GeneralLabelInfoType.swift */,
 				2695BDFF25DFE43C00404815 /* DeviceInfoType.swift */,
+				26493A0A25E8BDA0007DE65B /* DeviceListModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -372,7 +399,8 @@
 				261842C125D7E058006F5EBD /* ForgotPasswordVC.swift */,
 				261842C425D7E822006F5EBD /* VerificationVC.swift */,
 				262B59E825DACDA300C4C502 /* ResetPasswordVC.swift */,
-				26A0160D25DD392F003387CE /* FullDevicePairingVC.swift */,
+				26AE0D6825E3804300B3EA39 /* FullDevicePairingVC */,
+				2686669425E4D76500E6CDF3 /* ScanQRVC.swift */,
 				26A0161125DD46AD003387CE /* FullDevicePairedSuccessfullyVC.swift */,
 			);
 			path = Entry;
@@ -474,6 +502,7 @@
 			children = (
 				7468663225DA4F72009918D4 /* AppColorManager.swift */,
 				7468663325DA4F72009918D4 /* AppMessages.swift */,
+				2686669925E4DAEE00E6CDF3 /* QRScanner.swift */,
 				7468663525DA4F72009918D4 /* AppFont.swift */,
 			);
 			path = Helper;
@@ -483,9 +512,11 @@
 			isa = PBXGroup;
 			children = (
 				7468663725DA4F72009918D4 /* UIKitExtension.swift */,
+				267217A125F65907002B03CE /* UIImageViewExtension.swift */,
 				262DBA8925DBDCF3004A6499 /* UIDeviceExtension.swift */,
 				7468663825DA4F72009918D4 /* StringExtension.swift */,
 				262DBA8F25DBEAA6004A6499 /* DictionaryExtension.swift */,
+				26493A0D25E8BEE9007DE65B /* DateExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -509,6 +540,7 @@
 			packageProductDependencies = (
 				26D5F11125D6AD6000065FC0 /* IQKeyboardManagerSwift */,
 				261842C825D7EB9D006F5EBD /* Alamofire */,
+				267217A525F659B8002B03CE /* Kingfisher */,
 			);
 			productName = BagCam;
 			productReference = 266F36BD25D6778300EDAD38 /* BagCam.app */;
@@ -540,6 +572,7 @@
 			packageReferences = (
 				26D5F11025D6AD6000065FC0 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				261842C725D7EB9D006F5EBD /* XCRemoteSwiftPackageReference "Alamofire" */,
+				267217A425F659B8002B03CE /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 266F36BE25D6778300EDAD38 /* Products */;
 			projectDirPath = "";
@@ -589,14 +622,18 @@
 				26A015F325DD205D003387CE /* User.swift in Sources */,
 				26E3556425D68339007B7EF1 /* NavigationVC.swift in Sources */,
 				267B252D25DE36F800DF4BC4 /* TabbarVC.swift in Sources */,
+				2686669A25E4DAEE00E6CDF3 /* QRScanner.swift in Sources */,
 				266F36C525D6778300EDAD38 /* LoadingVC.swift in Sources */,
 				7468663D25DA4F72009918D4 /* UIKitExtension.swift in Sources */,
 				26E3558225D69BC1007B7EF1 /* UserInputFieldManager.swift in Sources */,
+				26AE0D6B25E3805600B3EA39 /* FullDevicePairingVC+Bluetooth.swift in Sources */,
 				2695BDF425DFDE1B00404815 /* EditDeviceNameTableCell.swift in Sources */,
 				2695BDFB25DFE26B00404815 /* DeviceInfoTableCell.swift in Sources */,
 				267B253B25DF952F00DF4BC4 /* DeviceNameTableCell.swift in Sources */,
 				26A0161225DD46AD003387CE /* FullDevicePairedSuccessfullyVC.swift in Sources */,
 				266F36C125D6778300EDAD38 /* AppDelegate.swift in Sources */,
+				26493A0B25E8BDA0007DE65B /* DeviceListModel.swift in Sources */,
+				2686669525E4D76500E6CDF3 /* ScanQRVC.swift in Sources */,
 				26A0160A25DD33BB003387CE /* BagImageType.swift in Sources */,
 				26E3555D25D6827C007B7EF1 /* ParentVC.swift in Sources */,
 				261842B425D7D91A006F5EBD /* SignupVC.swift in Sources */,
@@ -604,9 +641,11 @@
 				267B253125DE374400DF4BC4 /* TabbarView.swift in Sources */,
 				26A015FC25DD2FBB003387CE /* BagTableCell.swift in Sources */,
 				7468663B25DA4F72009918D4 /* WebService.swift in Sources */,
+				267217A225F65907002B03CE /* UIImageViewExtension.swift in Sources */,
 				2692C4A625DFB532009919D1 /* AddDeviceTableCell.swift in Sources */,
 				2692C4AA25DFB5C0009919D1 /* HomeVC.swift in Sources */,
 				7468662725DA4C29009918D4 /* TitleTableCell.swift in Sources */,
+				26493A0E25E8BEE9007DE65B /* DateExtension.swift in Sources */,
 				266F36CB25D6778300EDAD38 /* BagCam.xcdatamodeld in Sources */,
 				262DBA8A25DBDCF3004A6499 /* UIDeviceExtension.swift in Sources */,
 				2695BE0325DFE9AB00404815 /* DeviceSettingVC.swift in Sources */,
@@ -622,6 +661,7 @@
 				262DBA8725DBDCC9004A6499 /* ActivityIndicator.swift in Sources */,
 				26E3557125D68F10007B7EF1 /* WelcomeVC.swift in Sources */,
 				7468662A25DA4C29009918D4 /* UserInputFiledTableCell.swift in Sources */,
+				26343E2325E3A5FD00288FDD /* DevicePlayerVC.swift in Sources */,
 				261842C525D7E822006F5EBD /* VerificationVC.swift in Sources */,
 				261842C225D7E058006F5EBD /* ForgotPasswordVC.swift in Sources */,
 				26A0160625DD3156003387CE /* GeneralLabelInfoType.swift in Sources */,
@@ -792,7 +832,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development: Sam Ristich (9VCN5A5P33)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 96HXJ6UKC8;
 				INFOPLIST_FILE = BagCam/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -815,7 +855,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Distribution: Sam Ristich (96HXJ6UKC8)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 96HXJ6UKC8;
 				INFOPLIST_FILE = BagCam/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -863,6 +903,14 @@
 				minimumVersion = 5.4.1;
 			};
 		};
+		267217A425F659B8002B03CE /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.2.0;
+			};
+		};
 		26D5F11025D6AD6000065FC0 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
@@ -878,6 +926,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 261842C725D7EB9D006F5EBD /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		267217A525F659B8002B03CE /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 267217A425F659B8002B03CE /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 		26D5F11125D6AD6000065FC0 /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;

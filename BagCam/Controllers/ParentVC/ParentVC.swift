@@ -24,6 +24,16 @@ class ParentVC: UIViewController {
         prepareParentUI()
     }
     
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        collectionView?.collectionViewLayout.invalidateLayout()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        AppDelegate.DeviceOrientation.lockOrientation(.portrait, andRotateTo: .portrait)
+    }
+    
     deinit {
         print("Deallocated: \(self.classForCoder)")
     }

@@ -2,7 +2,7 @@
 //  TabbarView.swift
 //  BagCam
 //
-//  Created by Kevin Shah on 18/02/21.
+//  Created by Pankaj Patel on 18/02/21.
 //
 
 import UIKit

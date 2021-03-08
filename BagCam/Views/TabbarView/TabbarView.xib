@@ -129,10 +129,10 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="1kv-Wy-dvr" secondAttribute="trailing" id="10U-Is-tsD"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="X6s-hV-YCf" secondAttribute="trailing" id="1Sv-ws-PRJ"/>
-                <constraint firstItem="X6s-hV-YCf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="HD1-oj-ueB"/>
-                <constraint firstItem="1kv-Wy-dvr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="XpD-Ec-MmP"/>
+                <constraint firstAttribute="trailing" secondItem="1kv-Wy-dvr" secondAttribute="trailing" id="10U-Is-tsD"/>
+                <constraint firstAttribute="trailing" secondItem="X6s-hV-YCf" secondAttribute="trailing" id="1Sv-ws-PRJ"/>
+                <constraint firstItem="X6s-hV-YCf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="HD1-oj-ueB"/>
+                <constraint firstItem="1kv-Wy-dvr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="XpD-Ec-MmP"/>
                 <constraint firstItem="X6s-hV-YCf" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="bhf-EK-COB"/>
                 <constraint firstAttribute="bottom" secondItem="1kv-Wy-dvr" secondAttribute="bottom" id="ffH-DG-AKZ"/>
                 <constraint firstItem="1kv-Wy-dvr" firstAttribute="top" secondItem="X6s-hV-YCf" secondAttribute="top" id="spY-5J-TQh"/>

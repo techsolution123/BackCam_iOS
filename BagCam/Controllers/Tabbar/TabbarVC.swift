@@ -2,7 +2,7 @@
 //  TabbarVC.swift
 //  BagCam
 //
-//  Created by Kevin Shah on 18/02/21.
+//  Created by Pankaj Patel on 18/02/21.
 //
 
 import UIKit
@@ -17,6 +17,13 @@ class TabbarVC: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareUI()
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        let height: CGFloat = 50 + self.view.safeAreaInsets.bottom
+        let yPosition: CGFloat = self.view.frame.height - height
+        self.tabbarView?.frame = CGRect(x: 0, y: yPosition, width: self.view.frame.size.width, height: height)
     }
 }
 

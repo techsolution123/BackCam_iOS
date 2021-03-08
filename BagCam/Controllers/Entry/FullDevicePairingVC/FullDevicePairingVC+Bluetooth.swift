@@ -39,20 +39,22 @@ extension FullDevicePairingVC: CBCentralManagerDelegate {
     }
     
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
-        guard peripheral.name != nil else {
+        guard let deviceName = peripheral.name else {
             return
         }
         print("Bluetooth Name:\(peripheral.name!)")
         if !self.arrCBPeripheral.contains(peripheral) {
-            self.arrCBPeripheral.append(peripheral)
-            DispatchQueue.main.async {
-                self.arrDisplayCellType = [
-                    .row([BagImageType.normal,
-                          GeneralLabelInfoType.availableDevices,
-                          GeneralLabelInfoType.selectBagCam]),
-                    .devices(self.arrCBPeripheral)
-                ]
-                self.tableView.reloadData()
+            if deviceName.lowercased().contains("bagcam") {
+                self.arrCBPeripheral.append(peripheral)
+                DispatchQueue.main.async {
+                    self.arrDisplayCellType = [
+                        .row([BagImageType.normal,
+                              GeneralLabelInfoType.availableDevices,
+                              GeneralLabelInfoType.selectBagCam]),
+                        .devices(self.arrCBPeripheral)
+                    ]
+                    self.tableView.reloadData()
+                }
             }
         }
     }
