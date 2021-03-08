@@ -2,7 +2,7 @@
 //  WebService.swift
 //  BagCam
 //
-//  Created by Kevin Shah on 13/02/21.
+//  Created by Pankaj Patel on 13/02/21.
 //
 
 import UIKit
@@ -43,6 +43,8 @@ class Webservice {
         case forgotPassword = "forgot-password"
         case verificationCode = "verification-code"
         case resetPassword = "reset-password"
+        case addDevice = "add_device"
+        case deviceList = "device-pairing"
     }
     
     enum HeaderType: String {
