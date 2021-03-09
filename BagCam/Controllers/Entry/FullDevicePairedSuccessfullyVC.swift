@@ -19,7 +19,7 @@ class FullDevicePairedSuccessfullyVC: ParentVC {
     
     /// Variable Declaration(s)
     var isFromHomeVC: Bool = false
-    var deviceId: String = ""
+    var security_code: String = ""
     var connectedPeripheral: CBPeripheral!
     
     /// View Life Cycle
@@ -119,7 +119,11 @@ extension FullDevicePairedSuccessfullyVC {
     func webAddDeviceInfo() {
         var params: [String: Any] = self.userInputFieldManager.paramDict()
         params["user_id"] = _user.id
-        params["device_id"] = self.deviceId
+        let arrDeviceId = connectedPeripheral.name!.split(separator: "_")
+        if let id = arrDeviceId.last {
+            params["device_id"] = id
+        }
+        params["security_code"] = self.security_code
         self.showCentralSpinner()
         Webservice.shared.request(for: .addDevice, param: params) { [weak self] (status, json, error) in
             guard let self = self else {

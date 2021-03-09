@@ -58,7 +58,7 @@ class ScanQRVC: ParentVC {
             let destVC = segue.destination as! FullDevicePairedSuccessfullyVC
             destVC.isFromHomeVC = self.isFromHomeVC
             destVC.connectedPeripheral = self.connectedPeripheral
-            destVC.deviceId = sender as! String
+            destVC.security_code = sender as! String
         }
     }
 }
@@ -84,16 +84,12 @@ extension ScanQRVC {
                         self.isControllerPushed = true
                         self.objOfQRScanner.stopScanning()
                         let obj0 = arrFirstQR[0] as! AVMetadataMachineReadableCodeObject
-                        var deviceId: String = obj0.stringValue ?? ""
-                        let arrDeviceId = deviceId.split(separator: "_")
-                        if let id = arrDeviceId.last {
-                            deviceId = "\(id)"
-                        }
-                        print("QRCode name: \(deviceId)")
+                        let security_code: String = obj0.stringValue ?? ""
+                        print("QRCode name: \(security_code)")
                         let obj1 = arrFirstQR[1] as! AVMetadataObject
                         self.scannerTargetView.frame = obj1.bounds
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
-                            self.performSegue(withIdentifier: "segueFullDevicePairedSuccessfullyVC", sender: deviceId)
+                            self.performSegue(withIdentifier: "segueFullDevicePairedSuccessfullyVC", sender: security_code)
                         }
                     }
                 case .notFound:

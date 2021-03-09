@@ -11,6 +11,10 @@ import AVKit
 /// AVPlayerLayer
 class BGVideoLayer: AVPlayerLayer {
     
+    override init(layer: Any) {
+        super.init(layer: layer)
+    }
+    
     init(_ player: AVPlayer) {
         super.init()
         self.player = player
@@ -27,7 +31,11 @@ class DeviceListTableCell: UITableViewCell {
     /// @IBOutlet(s)
     @IBOutlet weak var lblVideoTime: UILabel!
     @IBOutlet weak var btnFullVideoScreen: UIButton!
-    @IBOutlet weak var videoView: UIView!
+    @IBOutlet weak var videoView: UIView! {
+        didSet {
+            videoView.backgroundColor = .black
+        }
+    }
     @IBOutlet weak var imgVVideoThumbnail: UIImageView!
     @IBOutlet weak var btnGoLive: UIButton!
     
@@ -54,6 +62,7 @@ class DeviceListTableCell: UITableViewCell {
     weak var parentHomeVC: HomeVC!
     var videoPlayer: AVPlayer!
     var videoPlayerLayer: BGVideoLayer!
+    var generator: ACThumbnailGenerator!
     
     var isVideoControllerHidden: Bool = true {
         didSet {
@@ -76,13 +85,27 @@ class DeviceListTableCell: UITableViewCell {
     
     var deviceListModel: DeviceListModel! {
         didSet {
-            imgVVideoThumbnail.image = deviceListModel.videoThumbnailImage
             lblVideoTime.text = deviceListModel.time_ago
             lblTitle.text = deviceListModel.device_name
             btnNumberOfEvent.setTitle("\(deviceListModel.number_of_event) EVENTS", for: .normal)
             isVideoControllerHidden = deviceListModel.isVideoControllerHidden
             
-            /// https://b-117b36f5.kinesisvideo.us-west-2.amazonaws.com/hls/v1/getHLSMasterPlaylist.m3u8?SessionToken=CiCkbM59EwKlZossQSA1ed-YM5OJZC6nC4HjCOfbJMy5jhIQDhmHTiS71qV3rBhmoW_nuhoZwHKCYM02EEewXPjMOfSp_jk8Yd36mbWCgCIgplpsHBwNa1nzaOXCe0zobwb6Gb6BQVLhlj-VDVnThZA~
+            if let url = deviceListModel.deviceVideoUrl, deviceListModel.videoThumbnailImage == nil {
+                generateThumbnail(path: url, completion: { (image) in
+                    if let image = image {
+                        DispatchQueue.main.async {
+                            self.deviceListModel.videoThumbnailImage = image
+                            self.imgVVideoThumbnail.image = self.deviceListModel.videoThumbnailImage
+                        }
+                    } else {
+                        DispatchQueue.main.async {
+                            self.imgVVideoThumbnail.image = UIImage(named: "ic_videoPlaceholder")
+                        }
+                    }
+                })
+            } else {
+                imgVVideoThumbnail.image = UIImage(named: "ic_videoPlaceholder")
+            }
         }
     }
     
@@ -91,6 +114,14 @@ class DeviceListTableCell: UITableViewCell {
         self.layoutIfNeeded()
         videoPlayerLayer?.frame = self.videoView.frame
         videoPlayerLayer?.videoGravity = .resizeAspectFill
+    }
+    
+    func generateThumbnail(path: URL, completion: @escaping ((UIImage?) -> ())) {
+        DispatchQueue.global().async {
+            self.generator = ACThumbnailGenerator(streamUrl: path)
+            self.generator.delegate = self
+            self.generator.captureImage(at: 300)
+        }
     }
 }
 
@@ -137,7 +168,18 @@ extension DeviceListTableCell {
     
     @IBAction func tapBtnGoLive(_ sender: UIButton) {
         if deviceListModel.isDeviceVideoUrlIsValid {
-            self.videoStart()
+            let asset = AVAsset(url: deviceListModel.deviceVideoUrl!)
+            let length = Float(asset.duration.value) / Float(asset.duration.timescale)
+            if length != 0.0  {
+                self.videoStart()
+            } else {
+                deviceListModel.isVideoErrorViewByDefaultHidden = false
+                deviceListModel.isVideoErrorViewByTapToHidden = true
+                /// Reloading tableView in main thread.
+                DispatchQueue.main.async {
+                    self.parentHomeVC.tableView.reloadData()
+                }
+            }
         } else {
             deviceListModel.isVideoErrorViewByDefaultHidden = false
             deviceListModel.isVideoErrorViewByTapToHidden = true
@@ -186,5 +228,14 @@ extension DeviceListTableCell {
     
     @IBAction func tapBtnSetting(_ sender: UIButton) {
         self.parentHomeVC.performSegue(withIdentifier: "segueDeviceSettingVC", sender: nil)
+    }
+}
+
+// MARK: - ACThumbnailGeneratorDelegate
+extension DeviceListTableCell: ACThumbnailGeneratorDelegate {
+    func generator(_ generator: ACThumbnailGenerator, didCapture image: UIImage, at position: Double) {
+        print("Thumbail Generated")
+        self.deviceListModel?.videoThumbnailImage = image
+        self.imgVVideoThumbnail?.image = image
     }
 }

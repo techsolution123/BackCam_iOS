@@ -25,6 +25,7 @@
 		26343E2325E3A5FD00288FDD /* DevicePlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26343E2225E3A5FD00288FDD /* DevicePlayerVC.swift */; };
 		26493A0B25E8BDA0007DE65B /* DeviceListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26493A0A25E8BDA0007DE65B /* DeviceListModel.swift */; };
 		26493A0E25E8BEE9007DE65B /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26493A0D25E8BEE9007DE65B /* DateExtension.swift */; };
+		266C3FB025F767A0008391D4 /* ACThumbnailGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266C3FAF25F767A0008391D4 /* ACThumbnailGenerator.swift */; };
 		266F36C125D6778300EDAD38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266F36C025D6778300EDAD38 /* AppDelegate.swift */; };
 		266F36C325D6778300EDAD38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266F36C225D6778300EDAD38 /* SceneDelegate.swift */; };
 		266F36C525D6778300EDAD38 /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266F36C425D6778300EDAD38 /* LoadingVC.swift */; };
@@ -100,6 +101,7 @@
 		26343E2225E3A5FD00288FDD /* DevicePlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicePlayerVC.swift; sourceTree = "<group>"; };
 		26493A0A25E8BDA0007DE65B /* DeviceListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListModel.swift; sourceTree = "<group>"; };
 		26493A0D25E8BEE9007DE65B /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		266C3FAF25F767A0008391D4 /* ACThumbnailGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACThumbnailGenerator.swift; sourceTree = "<group>"; };
 		266F36BD25D6778300EDAD38 /* BagCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BagCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		266F36C025D6778300EDAD38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		266F36C225D6778300EDAD38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -504,6 +506,7 @@
 				7468663325DA4F72009918D4 /* AppMessages.swift */,
 				2686669925E4DAEE00E6CDF3 /* QRScanner.swift */,
 				7468663525DA4F72009918D4 /* AppFont.swift */,
+				266C3FAF25F767A0008391D4 /* ACThumbnailGenerator.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -627,6 +630,7 @@
 				7468663D25DA4F72009918D4 /* UIKitExtension.swift in Sources */,
 				26E3558225D69BC1007B7EF1 /* UserInputFieldManager.swift in Sources */,
 				26AE0D6B25E3805600B3EA39 /* FullDevicePairingVC+Bluetooth.swift in Sources */,
+				266C3FB025F767A0008391D4 /* ACThumbnailGenerator.swift in Sources */,
 				2695BDF425DFDE1B00404815 /* EditDeviceNameTableCell.swift in Sources */,
 				2695BDFB25DFE26B00404815 /* DeviceInfoTableCell.swift in Sources */,
 				267B253B25DF952F00DF4BC4 /* DeviceNameTableCell.swift in Sources */,

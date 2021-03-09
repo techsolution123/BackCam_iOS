@@ -46,8 +46,6 @@ class DeviceListModel: NSObject {
         return URL(string: image_thumbnail)
     }
     
-    var tableViewReloadCompletion: (() -> ())?
-    
     init(_ dict: [String: Any]) {
         date = dict.optionalDate("date")
         device_id = dict.string("device_id")
@@ -58,30 +56,5 @@ class DeviceListModel: NSObject {
         number_of_event = dict.string("number_of_event")
         time_ago = dict.string("time_ago")
         device_status = DeviceStatus(rawValue: dict.string("device_status")) ?? .pending
-        super.init()
-        if let url = deviceVideoUrl, videoThumbnailImage == nil {
-            generateThumbnail(path: url, completion: { (image) in
-                self.videoThumbnailImage = image
-                self.tableViewReloadCompletion?()
-            })
-        } else {
-            videoThumbnailImage = UIImage(named: "ic_videoPlaceholder")
-        }
-    }
-    
-    func generateThumbnail(path: URL, completion: @escaping ((UIImage?) -> ())) {
-        DispatchQueue.global().async {
-            do {
-                let asset = AVURLAsset(url: path, options: nil)
-                let imgGenerator = AVAssetImageGenerator(asset: asset)
-                imgGenerator.appliesPreferredTrackTransform = true
-                let cgImage = try imgGenerator.copyCGImage(at: CMTimeMake(value: 0, timescale: 1), actualTime: nil)
-                let thumbnail = UIImage(cgImage: cgImage)
-                completion(thumbnail)
-            } catch let error {
-                print("Error generating thumbnail: \(error.localizedDescription)")
-                completion(nil)
-            }
-        }
     }
 }

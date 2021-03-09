@@ -97,13 +97,21 @@ extension FullDevicePairingVC {
     }
     
     func prepareDisplayCellTypeData() {
-        self.arrDisplayCellType = [
-            .row([BagImageType.normal,
-                  GeneralLabelInfoType.accountCreated,
-                  GeneralLabelInfoType.addYourFirstDevice,
-                  GeneralLabelInfoType.holdPairing,
-                  BagImageType.connect])
-        ]
+        if !isFromHomeVC {
+            self.arrDisplayCellType = [
+                .row([BagImageType.normal,
+                      GeneralLabelInfoType.accountCreated,
+                      GeneralLabelInfoType.addYourFirstDevice,
+                      GeneralLabelInfoType.holdPairing,
+                      BagImageType.connect])
+            ]
+        } else {
+            self.arrDisplayCellType = [
+                .row([BagImageType.normal,
+                      GeneralLabelInfoType.holdPairing,
+                      BagImageType.connect])
+            ]
+        }
     }
 }
 

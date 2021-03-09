@@ -23,6 +23,11 @@ class HomeVC: ParentVC {
         prepareUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tableView.reloadData()
+    }
+    
     // Sending data or navigating to another screen
     ///
     /// - Parameters:
@@ -130,14 +135,7 @@ extension HomeVC {
                 if let arrDataDict = jsonDict["data"] as? [[String: Any]] {
                     self.arrDeviceListModel = []
                     for dataDict in arrDataDict {
-                        let model = DeviceListModel(dataDict)
-                        model.tableViewReloadCompletion = { [weak self] in
-                            /// Reloading tableView in main thread
-                            DispatchQueue.main.async {
-                                self?.tableView.reloadData()
-                            }
-                        }
-                        self.arrDeviceListModel.append(model)
+                        self.arrDeviceListModel.append(DeviceListModel(dataDict))
                     }
                     /// Reloading tableView in main thread
                     DispatchQueue.main.async {

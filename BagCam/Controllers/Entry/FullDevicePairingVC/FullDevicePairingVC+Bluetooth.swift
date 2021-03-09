@@ -42,9 +42,9 @@ extension FullDevicePairingVC: CBCentralManagerDelegate {
         guard let deviceName = peripheral.name else {
             return
         }
-        print("Bluetooth Name:\(peripheral.name!)")
+        print("Bluetooth Name:\(deviceName)")
         if !self.arrCBPeripheral.contains(peripheral) {
-            if deviceName.lowercased().contains("bagcam") {
+//            if deviceName.lowercased().contains("bagcam") {
                 self.arrCBPeripheral.append(peripheral)
                 DispatchQueue.main.async {
                     self.arrDisplayCellType = [
@@ -55,7 +55,7 @@ extension FullDevicePairingVC: CBCentralManagerDelegate {
                     ]
                     self.tableView.reloadData()
                 }
-            }
+//            }
         }
     }
     
