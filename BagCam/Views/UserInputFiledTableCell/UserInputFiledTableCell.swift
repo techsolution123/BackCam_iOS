@@ -24,7 +24,7 @@ class TintTextField: UITextField {
             let image = button.image(for: .highlighted)?.withRenderingMode(.alwaysTemplate) {
             button.setImage(image, for: .normal)
             button.setImage(image, for: .highlighted)
-            button.tintColor = AppColorManager.shared.appBlack
+            button.tintColor = AppColorManager.shared.appPurple
 
             updatedClearImage = true
         }
@@ -75,8 +75,8 @@ class UserInputFiledTableCell: UITableViewCell {
         tfInput.keyboardType = .default
         tfInput.keyboardAppearance = .default
         tfInput.returnKeyType = .next
-        tfInput.tintColor = AppColorManager.shared.appBlack
-        tfInput.textColor = AppColorManager.shared.appBlack
+        tfInput.tintColor = AppColorManager.shared.appPurple
+        tfInput.textColor = AppColorManager.shared.appPurple
         tfInput.rightView = nil
         tfInput.rightViewMode = .never
         tfInput.inputView = nil
@@ -91,7 +91,7 @@ class UserInputFiledTableCell: UITableViewCell {
         imageView.image = UIImage(named: imageName)
         imageView.contentMode = .scaleAspectFit
         imageView.frame = rect
-        imageView.tintColor = AppColorManager.shared.appBlack
+        imageView.tintColor = AppColorManager.shared.appPurple
         uiView.addSubview(imageView)
         imageView.frame = CGRect(origin: .zero, size: CGSize(width: 24, height: 24))
         imageView.center = uiView.center

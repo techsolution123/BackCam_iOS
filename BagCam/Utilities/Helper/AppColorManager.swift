@@ -13,6 +13,7 @@ class AppColorManager: NSObject {
     static var shared: AppColorManager = AppColorManager()
     
     var appBlack: UIColor = UIColor(named: "appBlack")!
+    var appPurple: UIColor = UIColor(named: "appPurple")!
     var appBlue: UIColor = UIColor(named: "appBlue")!
     var appGray: UIColor = UIColor(named: "appGray")!
     var appPlaceholder: UIColor = UIColor(named: "appPlaceholder")!

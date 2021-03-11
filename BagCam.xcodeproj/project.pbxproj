@@ -22,6 +22,8 @@
 		262DBA8725DBDCC9004A6499 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262DBA8525DBDCC9004A6499 /* ActivityIndicator.swift */; };
 		262DBA8A25DBDCF3004A6499 /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262DBA8925DBDCF3004A6499 /* UIDeviceExtension.swift */; };
 		262DBA9025DBEAA6004A6499 /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262DBA8F25DBEAA6004A6499 /* DictionaryExtension.swift */; };
+		262DDDEA25F9E48400C62B79 /* AvenirNextLTPro-Demi.otf in Resources */ = {isa = PBXBuildFile; fileRef = 262DDDE925F9E48400C62B79 /* AvenirNextLTPro-Demi.otf */; };
+		262DDDED25F9E48D00C62B79 /* AvenirNextLTPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 262DDDEC25F9E48D00C62B79 /* AvenirNextLTPro-Regular.otf */; };
 		26343E2325E3A5FD00288FDD /* DevicePlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26343E2225E3A5FD00288FDD /* DevicePlayerVC.swift */; };
 		26493A0B25E8BDA0007DE65B /* DeviceListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26493A0A25E8BDA0007DE65B /* DeviceListModel.swift */; };
 		26493A0E25E8BEE9007DE65B /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26493A0D25E8BEE9007DE65B /* DateExtension.swift */; };
@@ -98,6 +100,8 @@
 		262DBA8525DBDCC9004A6499 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		262DBA8925DBDCF3004A6499 /* UIDeviceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
 		262DBA8F25DBEAA6004A6499 /* DictionaryExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
+		262DDDE925F9E48400C62B79 /* AvenirNextLTPro-Demi.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextLTPro-Demi.otf"; sourceTree = "<group>"; };
+		262DDDEC25F9E48D00C62B79 /* AvenirNextLTPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextLTPro-Regular.otf"; sourceTree = "<group>"; };
 		26343E2225E3A5FD00288FDD /* DevicePlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicePlayerVC.swift; sourceTree = "<group>"; };
 		26493A0A25E8BDA0007DE65B /* DeviceListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListModel.swift; sourceTree = "<group>"; };
 		26493A0D25E8BEE9007DE65B /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
@@ -176,6 +180,7 @@
 		261842A025D7CBDA006F5EBD /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				262DDDE825F9E46D00C62B79 /* AvenirNextLTPro */,
 				261842A725D7CC0A006F5EBD /* Gascogne */,
 				261842A125D7CBE5006F5EBD /* MabryPro */,
 				261842AE25D7CC31006F5EBD /* Pherome */,
@@ -216,6 +221,15 @@
 				262DBA8525DBDCC9004A6499 /* ActivityIndicator.swift */,
 			);
 			path = ActivityIndicator;
+			sourceTree = "<group>";
+		};
+		262DDDE825F9E46D00C62B79 /* AvenirNextLTPro */ = {
+			isa = PBXGroup;
+			children = (
+				262DDDEC25F9E48D00C62B79 /* AvenirNextLTPro-Regular.otf */,
+				262DDDE925F9E48400C62B79 /* AvenirNextLTPro-Demi.otf */,
+			);
+			path = AvenirNextLTPro;
 			sourceTree = "<group>";
 		};
 		266F36B425D6778300EDAD38 = {
@@ -594,6 +608,7 @@
 				262DBA7D25DBDB1B004A6499 /* Pherome.otf in Resources */,
 				266F36D025D6778900EDAD38 /* LaunchScreen.storyboard in Resources */,
 				262B59E625DACAD200C4C502 /* Home.storyboard in Resources */,
+				262DDDED25F9E48D00C62B79 /* AvenirNextLTPro-Regular.otf in Resources */,
 				7468662825DA4C29009918D4 /* TitleTableCell.xib in Resources */,
 				267B252825DE368F00DF4BC4 /* Tabbar.storyboard in Resources */,
 				2692C4B125DFBA67009919D1 /* DeviceListTableCell.xib in Resources */,
@@ -607,6 +622,7 @@
 				26A015F925DD2F41003387CE /* BagTableCell.xib in Resources */,
 				266F36CD25D6778900EDAD38 /* Assets.xcassets in Resources */,
 				261842A925D7CC14006F5EBD /* Gascogne-Regular.ttf in Resources */,
+				262DDDEA25F9E48400C62B79 /* AvenirNextLTPro-Demi.otf in Resources */,
 				2692C4BE25DFD7C6009919D1 /* EditDeviceNameTableCell.xib in Resources */,
 				266F36C825D6778300EDAD38 /* Entry.storyboard in Resources */,
 				26A0160025DD3054003387CE /* GeneralLabelInfoTableCell.xib in Resources */,

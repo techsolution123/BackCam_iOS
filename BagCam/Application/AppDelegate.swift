@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         /// IQKeyboardManager
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.toolbarBarTintColor = AppColorManager.shared.appGray
-        IQKeyboardManager.shared.toolbarTintColor = AppColorManager.shared.appBlack
+        IQKeyboardManager.shared.toolbarTintColor = AppColorManager.shared.appPurple
         
         /// CoreDatabaseManager
         /// Dependancy injection

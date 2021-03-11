@@ -8,11 +8,6 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="mabry-regular-pro.ttf">
-            <string>MabryPro-Regular</string>
-        </array>
-    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -78,7 +73,7 @@ Cannot Connect to device</string>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukh-m9-6CL">
                                         <rect key="frame" x="167.5" y="85.5" width="75" height="25"/>
-                                        <color key="backgroundColor" name="appBlue"/>
+                                        <color key="backgroundColor" name="appPurple"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ukh-m9-6CL" secondAttribute="height" multiplier="3:1" id="Y9c-BR-dMn"/>
                                             <constraint firstAttribute="width" constant="75" id="uBc-te-bks"/>
@@ -192,6 +187,7 @@ Cannot Connect to device</string>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eT2-CI-e3O">
                                         <rect key="frame" x="374" y="0.0" width="34" height="50"/>
+                                        <color key="tintColor" name="appPurple"/>
                                         <state key="normal" image="ic_setting"/>
                                         <connections>
                                             <action selector="tapBtnSetting:" destination="9et-O1-fKj" eventType="touchUpInside" id="tIY-bd-O1J"/>
@@ -205,14 +201,14 @@ Cannot Connect to device</string>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="9"/>
                                         <state key="normal" title="5 EVENTS">
-                                            <color key="titleColor" name="appBlue"/>
+                                            <color key="titleColor" name="appPurple"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                 <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" name="appBlue"/>
+                                                <color key="value" name="appPurple"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isViewRound" value="YES"/>
                                         </userDefinedRuntimeAttributes>
@@ -221,9 +217,9 @@ Cannot Connect to device</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kevin's Bag" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Zt-NF-cwJ">
-                                        <rect key="frame" x="10" y="6" width="91" height="19"/>
-                                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="17"/>
-                                        <color key="textColor" name="appBlack"/>
+                                        <rect key="frame" x="10" y="6" width="92" height="19"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                        <color key="textColor" name="appPurple"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="do7-F1-meS">
@@ -234,6 +230,7 @@ Cannot Connect to device</string>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="24" id="mgb-54-RJy"/>
                                                 </constraints>
+                                                <color key="tintColor" name="appPurple"/>
                                                 <state key="normal" image="ic_network"/>
                                                 <connections>
                                                     <action selector="tapBtnNetwork:" destination="9et-O1-fKj" eventType="touchUpInside" id="DcW-4b-5oi"/>
@@ -241,6 +238,7 @@ Cannot Connect to device</string>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0t-P5-VAr">
                                                 <rect key="frame" x="24" y="0.0" width="24" height="15"/>
+                                                <color key="tintColor" name="appPurple"/>
                                                 <state key="normal" image="ic_cloud"/>
                                                 <connections>
                                                     <action selector="tapBtnCloud:" destination="9et-O1-fKj" eventType="touchUpInside" id="erZ-ZQ-6Yf"/>
@@ -248,6 +246,7 @@ Cannot Connect to device</string>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0X-ue-i0e">
                                                 <rect key="frame" x="48" y="0.0" width="24" height="15"/>
+                                                <color key="tintColor" name="appPurple"/>
                                                 <state key="normal" image="ic_battery"/>
                                                 <connections>
                                                     <action selector="tapBtnBattery:" destination="9et-O1-fKj" eventType="touchUpInside" id="COh-km-Hvn"/>
@@ -350,11 +349,8 @@ Cannot Connect to device</string>
         <image name="ic_videoFullScreen" width="30" height="30"/>
         <image name="ic_videoPause" width="34" height="35"/>
         <image name="ic_videoPlaceholder" width="345" height="196"/>
-        <namedColor name="appBlack">
-            <color red="0.13725490196078433" green="0.12156862745098039" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="appBlue">
-            <color red="0.10588235294117647" green="0.47843137254901963" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="appPurple">
+            <color red="0.10196078431372549" green="0.12941176470588237" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

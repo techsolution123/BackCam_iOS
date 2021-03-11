@@ -34,6 +34,8 @@
 		<string>Mabry Pro Medium.ttf</string>
 		<string>mabry-regular-pro.ttf</string>
 		<string>Pherome.otf</string>
+		<string>AvenirNextLTPro-Regular.otf</string>
+		<string>AvenirNextLTPro-Demi.otf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
@@ -77,5 +79,9 @@
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>BagCam like to have bluetooth permission to scan bags.</string>
 </dict>
 </plist>

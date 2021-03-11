@@ -14,6 +14,8 @@ enum AppFont: String {
     case mabryProRegular = "MabryPro-Regular"
     case mabryProMedium = "MabryPro-Medium"
     case pheromeRegular = "Pherome"
+    case avenirNextRegular = "AvenirNext-Regular"
+    case avenirNextDemiBold = "AvenirNext-DemiBold"
     
     func of(_ size: CGFloat) -> UIFont {
         return UIFont(name: self.rawValue, size: size)!

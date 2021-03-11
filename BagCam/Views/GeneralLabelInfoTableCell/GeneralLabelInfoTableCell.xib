@@ -22,10 +22,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="431" height="83"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="􀁣 Account  Successfully Created" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YuB-V0-9j7">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="􀁣 Account  Successfully Created" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="YuB-V0-9j7">
                         <rect key="frame" x="8" y="8" width="415" height="67"/>
                         <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="17"/>
-                        <color key="textColor" name="appBlue"/>
+                        <color key="textColor" name="appPurple"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -44,8 +44,8 @@
         </tableViewCell>
     </objects>
     <resources>
-        <namedColor name="appBlue">
-            <color red="0.10588235294117647" green="0.47843137254901963" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="appPurple">
+            <color red="0.10196078431372549" green="0.12941176470588237" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

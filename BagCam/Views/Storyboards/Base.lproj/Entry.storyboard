@@ -9,14 +9,6 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Mabry Pro Medium.ttf">
-            <string>MabryPro-Medium</string>
-        </array>
-        <array key="mabry-regular-pro.ttf">
-            <string>MabryPro-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--LoadingVC-->
         <scene sceneID="tne-QT-ifu">
@@ -41,7 +33,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" name="appBlue"/>
+                        <color key="backgroundColor" name="appPurple"/>
                         <constraints>
                             <constraint firstItem="aG2-oz-uSN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7KW-mE-eWT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aG2-oz-uSN" secondAttribute="trailing" constant="8" id="86f-ng-bRl"/>
@@ -72,15 +64,15 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_appName" translatesAutoresizingMaskIntoConstraints="NO" id="igk-ij-Knm">
                                 <rect key="frame" x="100" y="227" width="175" height="44"/>
-                                <color key="tintColor" name="appBlue"/>
+                                <color key="tintColor" name="appPurple"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_bag" translatesAutoresizingMaskIntoConstraints="NO" id="tM9-fg-gJ3">
                                 <rect key="frame" x="121" y="335.66666666666669" width="133" height="225.00000000000006"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvc-O7-zHe">
                                 <rect key="frame" x="15" y="653" width="345" height="50"/>
-                                <color key="backgroundColor" name="appBlack"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="backgroundColor" name="appPurple"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <state key="normal" title="LOG IN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -98,7 +90,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="sWb-mA-5fN"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <state key="normal" title="CREATE ACCOUNT">
                                     <color key="titleColor" name="appText"/>
                                 </state>
@@ -173,8 +165,8 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmx-MS-g24">
                                 <rect key="frame" x="15" y="653" width="345" height="50"/>
-                                <color key="backgroundColor" name="appBlack"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="backgroundColor" name="appPurple"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <state key="normal" title="LOG IN →">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -192,7 +184,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="gmc-zr-kQt"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <state key="normal" title="Forgot Password?">
                                     <color key="titleColor" name="appText"/>
                                 </state>
@@ -204,8 +196,8 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bj-cn-b2J">
-                                        <rect key="frame" x="15" y="0.0" width="61" height="44"/>
-                                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="17"/>
+                                        <rect key="frame" x="15" y="0.0" width="59" height="44"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                         <state key="normal" title="← Back">
                                             <color key="titleColor" name="appText"/>
                                         </state>
@@ -272,11 +264,11 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s0X-Co-RSV">
                                 <rect key="frame" x="15" y="720" width="345" height="50"/>
-                                <color key="backgroundColor" name="appBlack"/>
+                                <color key="backgroundColor" name="appPurple"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="gq6-n1-37o"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <state key="normal" title="SIGN UP">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -293,8 +285,8 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tq9-TC-qCv">
-                                        <rect key="frame" x="15" y="0.0" width="61" height="44"/>
-                                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="17"/>
+                                        <rect key="frame" x="15" y="0.0" width="59" height="44"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                         <state key="normal" title="← Back">
                                             <color key="titleColor" name="appText"/>
                                         </state>
@@ -356,8 +348,8 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zm4-Fw-0su">
                                 <rect key="frame" x="15" y="653" width="345" height="50"/>
-                                <color key="backgroundColor" name="appBlack"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="backgroundColor" name="appPurple"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <state key="normal" title="SEND →">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -375,7 +367,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="eab-cI-otb"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <state key="normal" title="Forgot Password?">
                                     <color key="titleColor" name="appText"/>
                                 </state>
@@ -384,8 +376,8 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wk9-Fy-yuq">
-                                        <rect key="frame" x="15" y="0.0" width="61" height="44"/>
-                                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="17"/>
+                                        <rect key="frame" x="15" y="0.0" width="59" height="44"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                         <state key="normal" title="← Back">
                                             <color key="titleColor" name="appText"/>
                                         </state>
@@ -451,8 +443,8 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SYW-rf-mft">
                                 <rect key="frame" x="15" y="653" width="345" height="50"/>
-                                <color key="backgroundColor" name="appBlack"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="backgroundColor" name="appPurple"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <state key="normal" title="VERIFY →">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -470,7 +462,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="iGd-Tr-PEp"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <state key="normal" title="Need more help?">
                                     <color key="titleColor" name="appText"/>
                                 </state>
@@ -482,8 +474,8 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDV-41-nAF">
-                                        <rect key="frame" x="15" y="0.0" width="61" height="44"/>
-                                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="17"/>
+                                        <rect key="frame" x="15" y="0.0" width="59" height="44"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                         <state key="normal" title="← Back">
                                             <color key="titleColor" name="appText"/>
                                         </state>
@@ -550,8 +542,8 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTQ-il-Gg1">
                                 <rect key="frame" x="15" y="653" width="345" height="50"/>
-                                <color key="backgroundColor" name="appBlack"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="backgroundColor" name="appPurple"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <state key="normal" title="RESET">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -569,7 +561,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="uwL-HC-q3o"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <state key="normal" title="Need more help?">
                                     <color key="titleColor" name="appText"/>
                                 </state>
@@ -578,8 +570,8 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBC-TB-8rL">
-                                        <rect key="frame" x="15" y="0.0" width="61" height="44"/>
-                                        <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="17"/>
+                                        <rect key="frame" x="15" y="0.0" width="59" height="44"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                         <state key="normal" title="← Back">
                                             <color key="titleColor" name="appText"/>
                                         </state>
@@ -649,7 +641,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="ccl-fj-6TE"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <state key="normal" title="I dont have any devices.">
                                     <color key="titleColor" name="appText"/>
                                 </state>
@@ -709,11 +701,11 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXS-pL-fI7">
                                 <rect key="frame" x="15" y="720" width="345" height="50"/>
-                                <color key="backgroundColor" name="appBlack"/>
+                                <color key="backgroundColor" name="appPurple"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="KMH-JF-hXm"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <state key="normal" title="FINISH SETUP">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -789,7 +781,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="lo2-MU-uYy"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <state key="normal" title="CANCEL">
                                     <color key="titleColor" name="appText"/>
                                 </state>
@@ -809,25 +801,25 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan the Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcR-jb-XQR">
-                                <rect key="frame" x="100.66666666666667" y="415" width="173.66666666666663" height="30.333333333333314"/>
-                                <fontDescription key="fontDescription" name="MabryPro-Medium" family="Mabry Pro" pointSize="26"/>
-                                <color key="textColor" name="appBlack"/>
+                                <rect key="frame" x="100.33333333333333" y="415" width="174.33333333333337" height="35.666666666666686"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="26"/>
+                                <color key="textColor" name="appPurple"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zx9-nL-DhJ">
-                                <rect key="frame" x="74.666666666666671" y="462.33333333333331" width="225.66666666666663" height="40.666666666666686"/>
+                                <rect key="frame" x="71" y="467.66666666666669" width="233" height="46.666666666666686"/>
                                 <string key="text">Center the QR code on your 
 BagCam Bag in the green box</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <color key="textColor" name="appText"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0R6-3W-04X">
-                                <rect key="frame" x="15" y="540" width="345" height="50"/>
+                                <rect key="frame" x="15" y="551.33333333333337" width="345" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Agp-vv-3BL"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="MabryPro-Regular" family="Mabry Pro" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <state key="normal" title="Help me find the code">
                                     <color key="titleColor" name="appText"/>
                                 </state>
@@ -873,17 +865,14 @@ BagCam Bag in the green box</string>
         <image name="ic_appName" width="175" height="44"/>
         <image name="ic_bag" width="133" height="225"/>
         <image name="ic_qrCode" width="98" height="98"/>
-        <namedColor name="appBlack">
-            <color red="0.13725490196078433" green="0.12156862745098039" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="appBlue">
-            <color red="0.10588235294117647" green="0.47843137254901963" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="appGray">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="appPlaceholder">
             <color red="0.63921568627450975" green="0.63921568627450975" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="appPurple">
+            <color red="0.10196078431372549" green="0.12941176470588237" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="appText">
             <color red="0.68235294117647061" green="0.66274509803921566" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
